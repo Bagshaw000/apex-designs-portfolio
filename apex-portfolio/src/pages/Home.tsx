@@ -1,13 +1,15 @@
-// import { Box } from '@chakra-ui/react'
-// import React from 'react'
-// import { systemStyles } from '@/system'
+import React from "react";
+import Header from "../components/ui/Header";
 
-import Header from "./header";
+
 
 function Home() {
   return (
     <>
-     <Header></Header>
+      <div className="relative ">
+        <Header />
+
+      </div>
     </>
   );
 }
