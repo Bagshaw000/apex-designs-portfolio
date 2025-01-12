@@ -6,7 +6,7 @@
 
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Proxima;
   line-height: 1.5;
   font-weight: 400;
 
@@ -20,7 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* a {
+a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -77,5 +77,7 @@ button:focus-visible {
 @layer base {
   :root {
     --radius: 0.5rem;
-  } */
-/* } */
+  } 
+}
+
+

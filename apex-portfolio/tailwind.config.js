@@ -15,7 +15,7 @@ module.exports = {
       gray: "#8492a6",
       "gray-light": "#d3dce6",
       white: "#FFFFFF",
-      grey: "#424242",
+      greyam: "#424242",
       black: "#000000",
       "blue-am": "#343D6F",
       "blue-jean": "#59B9E1",
@@ -35,7 +35,12 @@ module.exports = {
       colors: {},
       backgroundImage: {
         blackLogo: "url('/src/assets/blackLogo.svg')",
-        "whiteLogo": "url('src/assets/whiteLogo.svg')",
+        whiteLogo: "url('src/assets/whiteLogo.svg')",
+        sphere: "url('../../../src/assets/Sphere2.svg')",
+      },
+      zIndex: {
+        1: "1",
+        100: "100",
       },
     },
   },
