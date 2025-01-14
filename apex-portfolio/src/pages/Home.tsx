@@ -1,12 +1,14 @@
-import Header from "../components/ui/Header";
-import HomeTag from "../components/ui/HomeTag";
+import About from "../pageComponent/About";
+import Header from "../pageComponent/Header";
+import HomeTag from "../pageComponent/HomeTag";
 
 function Home() {
   return (
     <>
-      <div className=" ">
+      <div className="relative ">
         <Header />
         <HomeTag />
+        <About/>
       </div>
     
     </>
