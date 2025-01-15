@@ -9,7 +9,7 @@ function About() {
             <b className="font-medium">Discover Our</b> Agency
           </h1>
         </div>
-        <div>
+        <div className="text-sm ">
           <h6 className="mb-[35px] text-[#42424298]">
             At <b>Apex Designs</b>, creativity meets strategy. We are a
             passionate collective of visionaries, innovators, and
@@ -31,14 +31,24 @@ function About() {
         </div>
       </div>
 
-      <div className="px-[10vw] flex flex-row justify-start items-center">
-        <div className="w-[60px] h-[60px] bg-gray rounded-[40px] mr-[20px]">
+      <div className="px-[10vw] flex flex-row justify-start items-center my-[60px]">
+        <div className="w-[60px] h-[60px]  min-w-[60px] bg-gray rounded-[40px] mr-[20px]">
           <div></div>
         </div>
         <div className="min-w-[200px]">
           <span className="text-[#000000] text-wrap font-light ">
             <b className="font-medium">Passionately Creating</b> Design Wonders:{" "}
             <b className="font-medium">Unleashing</b> Boundless Creativity
+          </span>
+        </div>
+      </div>
+
+      <div className=" w-[80vw] h-[400px] bg-greyam mx-[auto] mb-[60px]"></div>
+      <div>
+        <div>
+          <span>
+          
+            Professionals focused on helping your brand grow and move forward
           </span>
         </div>
       </div>

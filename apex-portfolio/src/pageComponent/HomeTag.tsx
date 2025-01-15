@@ -17,7 +17,7 @@ export default function HomeTag() {
           <b className="font-medium"> Brands </b> Today
         </h1>
 
-        <h5 className="sm: w-[70vw] text-sm mb-[60px]	text-[#e8e8eb70] font-thin">
+        <h5 className="sm: w-[70vw] text-base mb-[60px]	text-[#e8e8eb70] font-thin w-[80vw]">
           Welcome to our world of endless imagination and boundless creativity.
           Together, let's embark on a remarkable journey where dreams become
           tangible realities.
