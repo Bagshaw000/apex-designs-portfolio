@@ -1,11 +1,17 @@
-import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+
 // import sphere from "../../../src/assets/sphere1 (1).png";
 
 export default function HomeTag() {
+
+
+
+
+
   return (
     <div className=" h-[90vh] min-h-fit bg-black px-[2.5vw] relative z-0 ">
       {/* <div className="sm: z-0 ">
@@ -17,7 +23,7 @@ export default function HomeTag() {
           <b className="font-medium"> Brands </b> Today
         </h1>
 
-        <h5 className="sm: w-[70vw] text-base mb-[60px]	text-[#e8e8eb70] font-thin w-[80vw]">
+        <h5 className="sm:  text-base mb-[60px]	text-[#e8e8eb70] font-thin w-[80vw]">
           Welcome to our world of endless imagination and boundless creativity.
           Together, let's embark on a remarkable journey where dreams become
           tangible realities.
