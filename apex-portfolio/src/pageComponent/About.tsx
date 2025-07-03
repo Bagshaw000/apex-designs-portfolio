@@ -18,71 +18,79 @@ function About() {
   const review: number[] = [3, 1, 2];
   return (
     <>
-      <div className="text-[#000000] px-[10vw] mb-[20px]">
-        <div className="my-16">
+      <div className="text-[#000000] px-[10vw]  mb-[20px] lg:my-[60px] max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-[100vw] lg:px-[10vw] xl:px-[5vw] lg:items-center">
+        <div className="lg:w-[50%] lg:max-w-[500px]">
+          <div className="my-16 lg:w-[inherit]">
+            <RevealOnScroll to={transitionElement}>
+              <h1 className="text-4xl font-thin lg:text-6xl w-[inherit]">
+                <b className={`font-medium`}>
+                  Discover<br className="hidden lg:block"></br> Our
+                </b>{" "}
+                Agency
+              </h1>
+            </RevealOnScroll>
+          </div>
+          <div className="text-sm lg:max-w-[400px]">
+            <RevealOnScroll to={transitionElement}>
+              <h6 className="mb-[35px] text-[#42424298]">
+                At <b>Apex Designs</b>, creativity meets strategy. We are a
+                passionate collective of visionaries, innovators, and
+                problem-solvers driven to turn ideas into impactful realities.
+                With expertise spanning design and digital marketing, our
+                diverse talents blend seamlessly to craft compelling solutions
+                that elevate your brand and engage your audience. Together, we
+                build experiences that inspire and deliver measurable success
+                for every client we serve
+              </h6>
+            </RevealOnScroll>
+
+            <RevealOnScroll to={transitionElement}>
+              <h6 className="text-[#42424298]">
+                Collaboration fuels everything we create. Our strength lies in
+                the dynamic synergy sparked by diverse perspectives coming
+                together. This vibrant exchange of ideas fosters an atmosphere
+                of boundless creativity, where innovation flourishes. By
+                channeling our collective expertise, we deliver extraordinary
+                solutions that go beyond expectations and drive lasting impact.
+              </h6>
+            </RevealOnScroll>
+          </div>
           <RevealOnScroll to={transitionElement}>
-            <h1 className="text-4xl font-thin">
-              <b className={`font-medium`}>Discover Our</b> Agency
-            </h1>
+            <div className=" flex flex-row justify-start items-center my-[60px] max-w-[1500px] ml-0">
+              <div className="w-[60px] h-[60px]  min-w-[60px] bg-gray rounded-[40px] mr-[20px]">
+                <div></div>
+              </div>
+              <div className="min-w-[200px]">
+                <span className="text-[#000000] text-wrap font-light ">
+                  <b className="font-medium">Passionately Creating</b> Design
+                  Wonders: <br className=" hidden lg:block" />{" "}
+                  <b className="font-medium">Unleashing</b> Boundless Creativity
+                </span>
+              </div>
+            </div>
           </RevealOnScroll>
         </div>
-        <div className="text-sm ">
+        <div>
           <RevealOnScroll to={transitionElement}>
-            <h6 className="mb-[35px] text-[#42424298]">
-              At <b>Apex Designs</b>, creativity meets strategy. We are a
-              passionate collective of visionaries, innovators, and
-              problem-solvers driven to turn ideas into impactful realities.
-              With expertise spanning design and digital marketing, our diverse
-              talents blend seamlessly to craft compelling solutions that
-              elevate your brand and engage your audience. Together, we build
-              experiences that inspire and deliver measurable success for every
-              client we serve
-            </h6>
-          </RevealOnScroll>
-
-          <RevealOnScroll to={transitionElement}>
-            <h6 className="text-[#42424298]">
-              Collaboration fuels everything we create. Our strength lies in the
-              dynamic synergy sparked by diverse perspectives coming together.
-              This vibrant exchange of ideas fosters an atmosphere of boundless
-              creativity, where innovation flourishes. By channeling our
-              collective expertise, we deliver extraordinary solutions that go
-              beyond expectations and drive lasting impact.
-            </h6>
+            <div className="max-w-[1500px] mx-auto">
+              <div className=" w-[iherit]  min-h-[600px] bg-greyam mx-[auto] mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[600px]  lg:w-[400px] lg:max-w-[500px] max-w-[1500px] lg:mb-0"></div>
+            </div>
           </RevealOnScroll>
         </div>
       </div>
-      <RevealOnScroll to={transitionElement}>
-        <div className="px-[10vw] flex flex-row justify-start items-center my-[60px]">
-          <div className="w-[60px] h-[60px]  min-w-[60px] bg-gray rounded-[40px] mr-[20px]">
-            <div></div>
-          </div>
-          <div className="min-w-[200px]">
-            <span className="text-[#000000] text-wrap font-light ">
-              <b className="font-medium">Passionately Creating</b> Design
-              Wonders: <b className="font-medium">Unleashing</b> Boundless
-              Creativity
-            </span>
-          </div>
-        </div>
-      </RevealOnScroll>
-
-      <RevealOnScroll to={transitionElement}>
-        <div className=" w-[80vw] min-h-[600px] bg-greyam mx-[auto] mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px]  lg:h-[900px]"></div>
-      </RevealOnScroll>
 
       {/* Services */}
-      <div className="bg-black w-[100vw] text-sm  px-[5vw] py-[80px] h-[fit]  ">
+      <div className="bg-black w-[100vw] text-sm  px-[5vw] py-[80px] h-[fit] lg:pb-0  ">
         <RevealOnScroll to={transitionElement}>
-          <div className="w-[60%] mx-[auto] text-center md:w-[30%]  md:text-right md:mr-24">
+          <div className="w-[60%] mx-[auto] text-center md:w-[30%]  md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
             <span className="text-[#e8e8eb70]">
-              Professionals focused on helping your brand grow and move forward
+              Professionals focused on helping your brand grow and move forward 
             </span>
           </div>
         </RevealOnScroll>
 
         <RevealOnScroll to={transitionElement}>
-          <div className="w-[85vw] mx-auto h-fit mb-[120px]">
+          <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[150px]">
             <div className="text-center mb-0 mx-auto md:flex md:flex-row md:items-center md:w-fit md:mx-auto md:mt-[80px]">
               <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]"></div>
               <h1 className="sm: font-mono font-thin text-zinc-600 text-4xl w-[inherit] mt-[60px] md:mt-0  md:w-fit  md:text-6xl">
@@ -118,49 +126,51 @@ function About() {
         </RevealOnScroll>
 
         <RevealOnScroll to={transitionElement}>
-          <div className="flex flex-wrap  justify-center h-[700px]   ">
-            <RevealOnScroll to={transitionElement}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[80%] sm:w-[400px]">
-                <div className="flex flex-col justify-between w-[100%] px-[30px] py-[50px] h-[100%]">
-                  <h2 className="text-start font-medium text-base">
-                    {" "}
-                    Brand and Identity Design
-                  </h2>
+          <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] lg:justify-center lg:flex-row lg:mb-0">
+            <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row">
+              <RevealOnScroll to={transitionElement}>
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
+                  <div className="flex flex-col justify-between w-[100%] px-[30px] py-[50px] h-[100%]">
+                    <h2 className="text-start font-medium text-base">
+                      {" "}
+                      Brand and Identity Design
+                    </h2>
 
-                  <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
-                    Our expert team crafts impactful brand identities, from
-                    custom logos to comprehensive brand guides, to help your
-                    business thrive.
-                  </h5>
-                  <div className="w-[45px] h-[45px] bg-purple rounded-[35px]  flex flex-row justify-center items-center ">
-                    <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
+                      Our expert team crafts impactful brand identities, from
+                      custom logos to comprehensive brand guides, to help your
+                      business thrive.
+                    </h5>
+                    <div className="w-[45px] h-[45px] bg-purple rounded-[35px]  flex flex-row justify-center items-center ">
+                      <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </RevealOnScroll>
+              </RevealOnScroll>
 
-            <RevealOnScroll to={transitionElement}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[80%] sm:w-[400px]">
-                <div className="flex flex-col justify-between w-[100%] px-[30px] py-[50px] h-[100%]">
-                  <h2 className="text-start font-medium text-base">
-                    {" "}
-                    Digital Marketing
-                  </h2>
+              <RevealOnScroll to={transitionElement}>
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
+                  <div className="flex flex-col justify-between w-[100%] px-[30px] py-[50px] h-[100%]">
+                    <h2 className="text-start font-medium text-base">
+                      {" "}
+                      Digital Marketing
+                    </h2>
 
-                  <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
-                    Driving growth with SEO optimization, brand strategy, social
-                    optimization, content and copywriting, social media
-                    management, and paid ads.
-                  </h5>
-                  <div className="w-[45px] h-[45px] bg-purple rounded-[35px]  flex flex-row justify-center items-center ">
-                    <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
+                      Driving growth with SEO optimization, brand strategy,
+                      social optimization, content and copywriting, social media
+                      management, and paid ads.
+                    </h5>
+                    <div className="w-[45px] h-[45px] bg-purple rounded-[35px]  flex flex-row justify-center items-center ">
+                      <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </RevealOnScroll>
+              </RevealOnScroll>
+            </div>
 
             <RevealOnScroll to={transitionElement}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[80%] sm:w-[400px]">
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
                 <div className="flex flex-col justify-between w-[100%] px-[30px] py-[50px] h-[100%]">
                   <h2 className="text-start font-medium text-base">
                     {" "}
@@ -183,10 +193,10 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:flex justify-between lg:items-center">
+      <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-[100vw] lg:w-[100vw] lg:px-[10vw] xl:px-[5vw]">
         <div className="mb-[50px] lg:w-[45%]">
           <RevealOnScroll to={transitionElement}>
-            <h1 className="text-4xl font-thin text-[#000000] my-12 md:text-5xl ">
+            <h1 className="text-4xl font-thin text-[#000000] my-12 md:text-5xl lg:text-6xl ">
               <b className="font-medium">
                 Meet <br className="hidden sm:block" />
                 Our Team
@@ -194,7 +204,7 @@ function About() {
             </h1>
           </RevealOnScroll>
 
-          <div className="text-sm font-thin md:text-base">
+          <div className="text-sm font-thin md:text-base lg:max-w-[300px]">
             <RevealOnScroll to={transitionElement}>
               <h5 className=" text-[#42424298] mb-[35px]">
                 We are talented individuals who are passionate about bringing
@@ -221,19 +231,39 @@ function About() {
             </div>
           </RevealOnScroll>
         </div>
-        <div className="w-[inherit] flex flex-wrap justify-between  h-[2600px] sm:h-[80vh] py-10  sm:flex-wrap sm:items-start lg:w-[46%] lg:h-[700px]">
+        {/* <div className="w-[inherit] flex flex-wrap justify-between  h-[2600px] sm:h-[80vh] py-10  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1350px] lg:w-[500px] lg:max-w-[500px] lg:h-[750px]">
           <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] lg:w-[210px] lg:h-[300px]"></div>
+            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw]    sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px]  lg:h-[300px]"></div>
           </RevealOnScroll>
           <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] lg:w-[210px] lg:h-[300px]"></div>
+            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
           </RevealOnScroll>
           <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] lg:w-[210px] lg:h-[300px]"></div>
+            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
           </RevealOnScroll>
           <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] lg:w-[210px] lg:h-[300px]"></div>
+            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
           </RevealOnScroll>
+        </div> */}
+
+
+        <div className="w-[inherit] flex flex-col justify-between h-[2450px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[500px] lg:max-w-[500px] lg:h-[700px] lg:py-auto">
+          <div className="flex flex-col h-[1200px] justify-between sm:h-[1125px] lg:h-[650px] lg:w-[50%] lg:items-start ">
+            <RevealOnScroll to={transitionElement}>
+              <div className="w-[80vw] mx-auto  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]   sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px]"></div>
+            </RevealOnScroll>
+            <RevealOnScroll to={transitionElement}>
+              <div className="w-[80vw] mx-auto  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]   sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px]"></div>
+            </RevealOnScroll>
+          </div>
+          <div className="flex flex-col justify-between h-[1200px] sm:h-[1125px] lg:h-[650px] lg:py-auto lg:w-[50%] lg:items-end">
+            <RevealOnScroll to={transitionElement}>
+              <div className="w-[80vw] mx-auto  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:h-[300px]"></div>
+            </RevealOnScroll>
+            <RevealOnScroll to={transitionElement}>
+              <div className="w-[80vw] mx-auto  bg-greyam h-[575px] sm:w-[39vw]  sm:max-h-[550px] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:h-[300px]"></div>
+            </RevealOnScroll>
+          </div>
         </div>
       </div>
 

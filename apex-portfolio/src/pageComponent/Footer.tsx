@@ -8,8 +8,8 @@ function Footer() {
   const transitionElement =
     "transition-opacity duration-1000 animate-in fade-in delay-200 slide-in-from-bottom-8 ease-in-out slide-out-to-top-2 ";
   return (
-    <div className="bg-black flex-col px-[8vw] py-[100px]">
-      <div className="flex flex-col md:flex-row md:justify-between ">
+    <div className="bg-black flex-col px-[8vw] py-[100px] font-outfit">
+      <div className="flex flex-col md:flex-row md:justify-between max-w-[1200px] md:mx-auto">
         <div className="flex flex-col justify-between h-[200px] mb-10 md:h-[200px] md:w-[40%]">
           <RevealOnScroll to={transitionElement}>
             <div>

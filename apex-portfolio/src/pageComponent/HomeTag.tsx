@@ -1,35 +1,40 @@
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-
 // import sphere from "../../../src/assets/sphere1 (1).png";
 
 export default function HomeTag() {
-
-
-
-
-
   return (
-    <div className=" h-[90vh] min-h-fit bg-black px-[2.5vw] relative z-0 ">
-      {/* <div className="sm: z-0 ">
-        <img src={sphere} alt="" className="sm: w-[6070px] " />
+    <div className=" h-[100vh] w-[100vw] min-h-fit bg-black px-[10vw] relative z-0 top-0">
+      {/* <div className="z-[1000] text-pink-500">
+        <svg viewBox="0 0 128 128" className="w-8 h-8 fill-gray">
+          <path
+            d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2
+      c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2
+      L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2
+      L106.1,41.9z"
+            fill="fill-gray"
+          />
+        </svg>
       </div> */}
-      <div className="mb-[10%] sm: z-100  px-[8vw]  absolute bottom-0 left-0 flex-col justify-between">
-        <h1 className="sm: font-mono font-thin text-zinc-600 text-4xl w-[80vw] mb-[60px] ">
-          <b className="font-medium">Shaping</b> Tomorrow’s 
-          <b className="font-medium"> Brands </b> Today
-        </h1>
+      <div className="w-fit lg:max-w-[100%] xl:max-w-[1200px] mx-auto lg:px-0 xl:px-[5vw] flex flex-col justify-end  bottom-0  items-start   h-[inherit] ">
+        <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col">
+          <h1 className="sm:font-mono font-thin text-zinc-600 text-5xl w-[100%] mb-[10px]  lg:text-6xl  ">
+            <b className="font-medium lg:mb-[5px]">Shaping</b> Tomorrow’s
+          </h1>
+          <h1 className="sm:font-mono font-thin text-zinc-600 text-5xl w-[100%] mb-[60px] lg:text-6xl  ">
+            <b className="font-medium"> Brands </b> Today
+          </h1>
+        </p>
 
-        <h5 className="sm:  text-base mb-[60px]	text-[#e8e8eb70] font-thin w-[80vw]">
+        <h5 className="sm:text-base mb-[60px]	text-[#e8e8eb70] font-thin w-[80%] max-w-[inherit]">
           Welcome to our world of endless imagination and boundless creativity.
           Together, let's embark on a remarkable journey where dreams become
           tangible realities.
         </h5>
 
-        <div className=" flex flex-wrap sm:flex-row justify-between items-center max-w-[430px]">
+        <div className=" flex flex-wrap sm:flex-row justify-between items-center max-w-[430px] mb-[10%]">
           <a
             href=""
             className=" py-[auto]  bg-[#8BC6E4] rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5"
@@ -65,7 +70,6 @@ export default function HomeTag() {
           </a>
         </div>
       </div>
-      
     </div>
   );
 }

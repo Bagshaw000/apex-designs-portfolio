@@ -1,23 +1,36 @@
 import whiteLogo from "../assets/whiteLogo.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router";
 
 function Header() {
   const [checked, setChecked] = useState(true);
+  const [headerColor, setHeaderColor] = useState('')
   const handleClick = () => {
     setChecked(!checked);
     console.log(checked);
   };
+
+   useEffect(() => {
+    // Get the computed style of the body element
+    const computedStyle = window.getComputedStyle(document.body);
+    // Get the background-color property
+    const currentBgColor = computedStyle.getPropertyValue('background-color');
+    console.log(currentBgColor)
+    if(currentBgColor =="white"){
+
+    }
+    setHeaderColor(currentBgColor);
+  }, []);
 
   const transitionHeader: string =
     "h-fit hover:translate-x-5 transform transition-transform animate-in fade-in ease-out duration-2000";
 
   return (
     <div className="">
-      <div className=" fixed right-0 left-0 z-100 border-b-[0.2px] border-[#7373734f] bg-black w-screen  h-[10vh] mt-0 px-[5vw] py-[2vh] max sm:px-[2.5vw]  inset-x-0 top-0">
-        <div className="flex flex-row max-h-[10vh]  justify-between items-center ">
+      <div className=" bg-black fixed right-0 left-0 z-100 border-b-[0px] border-[#7373734f]  w-screen  h-[100px] max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw]  inset-x-0 top-0">
+        <div className="flex flex-row h-[inherit] my-auto justify-between items-center ">
           <div className="w-1/5 min-w-[60px] bg-whiteLogo">
             <img src={whiteLogo} alt="" className="h-[80px] " />
           </div>
