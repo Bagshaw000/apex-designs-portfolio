@@ -1,4 +1,4 @@
-@import "tailwindcss";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
@@ -6,24 +6,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ... */
 
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Proxima;
-  line-height: 1.5;
-  font-weight: 400;
+@custom-variant dark (&:is(.dark *));
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #ffffff;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-*: initial;
+  --color-blue: #1fb6ff;
+  --color-purple: #7e5bef;
+  --color-gray: #8492a6;
+  --color-gray-light: #d3dce6;
+  --color-white: #ffffff;
+  --color-greyam: #424242;
+  --color-black: #000000;
+  --color-blue-am: #343d6f;
+  --color-blue-jean: #59b9e1;
+  --color-blue-yk: #1c1b3b;
+  --color-purple-am: #4a2245;
+
+  --font-*: initial;
+  --font-sans: Graphik, sans-serif;
+  --font-serif: Merriweather, serif;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --background-image-black-logo: url('/src/assets/blackLogo.svg');
+  --background-image-white-logo: url('src/assets/whiteLogo.svg');
+  --background-image-sphere: url('../../../src/assets/Sphere2.svg');
+
+  --z-index-1: 1;
+  --z-index-100: 100;
 }
-/* 
+@theme {
+  --font-outfit: 'Outfit';
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  /* ... */
+
+  :root {
+    font-family:
+      Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Proxima;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #ffffff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* 
 a {
   font-weight: 500;
   color: #646cff;
@@ -32,27 +95,32 @@ a {
 a:hover {
   color: #535bf2;
 } */
- @theme{
-  --font-outfit: "Outfit", "sans-serif"
- }
+}
+
+@font-face {
+      font-family: 'Outfit';
+      src: 
+           url('./font/Outfit-Regular.ttf') format('woff');
+      /* Add other font formats if needed */
+    }
 
 
 
-
-body {
-  margin: 0;
-  /* display: flex;
+@layer utilities {
+  body {
+    margin: 0;
+    /* display: flex;
   place-items: center; */
-  min-width: 100vw;
-  min-height: 100vh;
-}
+    min-width: 100vw;
+    min-height: 100vh;
+  }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
 
-/* button {
+  /* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -71,16 +139,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
   }
 }
 

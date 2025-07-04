@@ -6,7 +6,7 @@ import HomeTag from "../pageComponent/HomeTag";
 function Home() {
   return (
     <>
-      <div className="relative ">
+      <div className="relative font-outfit">
         <Header />
         <HomeTag />
         <About/>

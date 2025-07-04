@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider} from "react-router";
+import Services from "./pages/Services.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/services",
-    element: <>Service</>
+    Component: Services,
   },
   {
     path:"/contact",

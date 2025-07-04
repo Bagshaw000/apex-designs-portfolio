@@ -1,25 +1,24 @@
 import whiteLogo from "../assets/whiteLogo.svg";
 import { useEffect, useState } from "react";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router";
+import NotesIcon from "@mui/icons-material/Notes";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Header() {
   const [checked, setChecked] = useState(true);
-  const [headerColor, setHeaderColor] = useState('')
+  const [headerColor, setHeaderColor] = useState("");
   const handleClick = () => {
     setChecked(!checked);
     console.log(checked);
   };
 
-   useEffect(() => {
+  useEffect(() => {
     // Get the computed style of the body element
     const computedStyle = window.getComputedStyle(document.body);
     // Get the background-color property
-    const currentBgColor = computedStyle.getPropertyValue('background-color');
-    console.log(currentBgColor)
-    if(currentBgColor =="white"){
-
+    const currentBgColor = computedStyle.getPropertyValue("background-color");
+    console.log(currentBgColor);
+    if (currentBgColor == "white") {
     }
     setHeaderColor(currentBgColor);
   }, []);
@@ -29,9 +28,9 @@ function Header() {
 
   return (
     <div className="">
-      <div className=" bg-black fixed right-0 left-0 z-100 border-b-[0px] border-[#7373734f]  w-screen  h-[100px] max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw]  inset-x-0 top-0">
+      <div className=" bg-black fixed right-0 left-0 z-50 border-b-[0.2px] border-[#7373734f]  w-screen  h-[100px] max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw]  inset-x-0 top-0">
         <div className="flex flex-row h-[inherit] my-auto justify-between items-center ">
-          <div className="w-1/5 min-w-[60px] bg-whiteLogo">
+          <div className="w-1/5 min-w-[60px] bg-white-logo">
             <img src={whiteLogo} alt="" className="h-[80px] " />
           </div>
 
@@ -41,18 +40,14 @@ function Header() {
                 onClick={handleClick}
                 className=" animate-in fade-in-10  duration-1000"
               >
-                <FontAwesomeIcon
-                  icon={faBars}
-                  style={{ color: "#ffffff" }}
-                  size="lg"
-                />
+                <NotesIcon />
               </button>
             ) : (
               <button
                 onClick={handleClick}
                 className=" animate-in fade-in-10  duration-1000 "
               >
-                <FontAwesomeIcon icon={faXmark} size="lg" />
+                <CloseIcon />
               </button>
             )}
           </div>
@@ -60,7 +55,7 @@ function Header() {
       </div>
 
       {checked ? null : (
-        <div className="z-10 fixed top-[9vh] right-0 left-0 text-white font-semibold h-[91vh] bg-black  duration-1000 animate-in slide-in-from-top-10 ">
+        <div className="z-10 fixed top-[100px] right-0 left-0 text-white font-semibold h-[100vh] bg-black  duration-1000 animate-in slide-in-from-top-10 ">
           <div
             className={`flex flex-col justify-between items-center py-[300px] h-[inherit]  duration-1000 animate-in slide-in-from-bottom-12 `}
           >
@@ -95,7 +90,7 @@ const ActiveLink = (to: string, children: string) => {
     <Link
       to={to}
       className={` ${
-        isActive ? "text-blue-am" : "text-white"
+        isActive ? "text-amber-500" : "text-white"
       } text-2xl hover:translate-x-5 hover: `}
     >
       {children}

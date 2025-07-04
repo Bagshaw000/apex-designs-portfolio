@@ -1,8 +1,9 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faBehance, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { RevealOnScroll } from "../components/ui/transition";
+
 
 function Footer() {
   const transitionElement =
@@ -13,7 +14,7 @@ function Footer() {
         <div className="flex flex-col justify-between h-[200px] mb-10 md:h-[200px] md:w-[40%]">
           <RevealOnScroll to={transitionElement}>
             <div>
-              <h5 className="text-[#d6d6d6] font-bold text-3xl ">
+              <h5 className="text-[#d6d6d6] font-medium text-3xl ">
                 Apex Designs Solutions
               </h5>
             </div>
@@ -32,36 +33,46 @@ function Footer() {
                 name=""
                 id=""
                 placeholder="ENTER YOUR EMAIL"
-                className="w-[100%] min-h-[85px] rounded-[50px] pl-[40px] md:min-h-[80px]"
+                className="w-full min-h-[85px] rounded-[50px] pl-[40px] md:min-h-[80px]"
               />
-              <div className="w-[50px] h-[50px] bg-purple rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
-                <FontAwesomeIcon icon={faArrowRight} style={{}} />
+              <div className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
+                <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
               </div>
             </div>
           </RevealOnScroll>
         </div>
-        <div className="flex flex-col justify-between text-xl font-bold h-[250px] md:h-[200px]  md:w-[20%]">
+        <div className="flex flex-col justify-between text-xl font-medium h-[250px] md:h-[200px]  md:w-[20%]">
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit">
-              <Link to="/services"> Services</Link>
+            <div className="h-fit ">
+              {ActiveLink("/", "Home")}
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll to={transitionElement}>
+            <div className="h-fit ">
+              
+              {ActiveLink("/services", "Services")}
             </div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
             <div className="h-fit">
-              <Link to="/portfolio"> Portfolio</Link>
+             
+              {ActiveLink("/portfolio", "Portfolio")}
             </div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
             <div className="h-fit">
-              <Link to="/contact"> Contact</Link>
+              
+              {ActiveLink("/contact", "Contact")}
             </div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
             <div className="h-fit">
-              <Link to="/blog"> Blog</Link>
+              {ActiveLink("/blog", "Blog")}
+            
             </div>
           </RevealOnScroll>
         </div>
@@ -69,23 +80,23 @@ function Footer() {
           <div className="mt-10 md:mt-0">
             <RevealOnScroll to={transitionElement}>
               <div className="flex flex-col justify-between h-[70px]">
-                <h2 className="text-2xl font-bold">Ghana</h2>
+                <h2 className="text-2xl font-medium ">Ghana</h2>
                 <span className="text-md text-[#8c8c8c]">Dummy Address</span>
               </div>
             </RevealOnScroll>
           </div>
           <div className="mt-10 md:mt-6">
             <RevealOnScroll to={transitionElement}>
-              <div className="flex flex-row justify-between w-[100px]">
+              <div className="flex flex-row justify-between w-[50px]">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   style={{ color: "#ffffff" }}
-                  size="2x"
+                  size="1x"
                 />
                 <FontAwesomeIcon
                   icon={faBehance}
                   style={{ color: "#ffffff" }}
-                  size="2x"
+                  size="1x"
                 />
               </div>
             </RevealOnScroll>
@@ -97,3 +108,20 @@ function Footer() {
 }
 
 export default Footer;
+
+// This function checks if the link is active
+ const ActiveLink = (to: string, children: string) => {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  // console.log(isActive);
+  return (
+    <Link
+      to={to}
+      className={` ${
+        isActive ? "text-amber-500" : "text-white"
+      } text-xl transform transition-all  duration-1000 ease-in-out hover:translate-x-5 hover:text-blue-am`}
+    >
+      {children}
+    </Link>
+  );
+};
