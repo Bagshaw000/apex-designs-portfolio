@@ -9,7 +9,7 @@ function Footer() {
   const transitionElement =
     "transition-opacity duration-1000 animate-in fade-in delay-200 slide-in-from-bottom-8 ease-in-out slide-out-to-top-2 ";
   return (
-    <div className="bg-black flex-col px-[8vw] py-[100px] font-outfit">
+    <div className="bg-black flex-col px-[8vw] py-[100px] font-outfit mb-0 w-[100vw] bottom-0 relative">
       <div className="flex flex-col md:flex-row md:justify-between max-w-[1200px] md:mx-auto">
         <div className="flex flex-col justify-between h-[200px] mb-10 md:h-[200px] md:w-[40%]">
           <RevealOnScroll to={transitionElement}>
@@ -33,7 +33,7 @@ function Footer() {
                 name=""
                 id=""
                 placeholder="ENTER YOUR EMAIL"
-                className="w-full min-h-[85px] rounded-[50px] pl-[40px] md:min-h-[80px]"
+                className="w-full min-h-[85px] bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[50px] pl-[40px] md:min-h-[80px]"
               />
               <div className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
                 <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
