@@ -55,9 +55,9 @@ function Header() {
       </div>
 
       {checked ? null : (
-        <div className="z-10 fixed top-[100px] right-0 left-0 text-white font-semibold h-[100] bg-black  duration-1000 animate-in slide-in-from-top-10 ">
+        <div className="z-10 fixed top-[100px] right-0 left-0 text-white font-semibold h-[100vh] bg-black  duration-1000 animate-in slide-in-from-top-10 ">
           <div
-            className={`flex flex-col justify-between items-center py-[300px] h-[inherit]  duration-1000 animate-in slide-in-from-bottom-12 `}
+            className={`flex flex-col justify-between items-center py-[300px] h-[inherit]  duration-1000 animate-in slide-in-from-bottom-12  max-h-[1000px]`}
           >
             <div className={transitionHeader}>
               {ActiveLink("/", "Homepage")}

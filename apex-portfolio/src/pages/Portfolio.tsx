@@ -14,13 +14,13 @@ function Portfolio() {
   useEffect(() => {
     const getPosts = async () => {
       const posts = await client.fetch(POSTS_QUERY);
-
+      // console.log(posts)
       setPost(posts);
-      // console.log(post);
+      //console.log(posts);
       // return posts;
     };
     getPosts();
-  }, []);
+  }, [post]);
   // const posts = await client.fetch(POSTS_QUERY);
   return (
     <>
@@ -48,20 +48,20 @@ function Portfolio() {
 
           <div className="flex flex-col md:flex-row md:justify-between">
             {post.map((element, index) =>
-              index % 0 == 0 ? (
+              index % 2 === 0 ? (
                 <a
                   key={element._id as string}
                   href={`/project/?slug=${element?.slug.current}`}
-                  className="mb-[30px]"
+                  className="mb-[30px] "
                 >
                   <RevealOnScroll to={transitionElement}>
-                    <div className="h-[fit] w-[fit]">
-                      <div className="w-[100%] min-h-[200px] h-[30%] mb-[10px] md:w-[35vw]">
+                    <div className="h-[fit] w-[fit]  ">
+                      <div className="w-[100%] min-h-[200px] h-[30%] mb-[10px] md:w-[35vw]  ">
                         <ImageComponent
                           image={element.coverImage}
                         ></ImageComponent>
                       </div>
-                      {/* <h5 className="text-amber-500 "> DESIGN</h5> */}
+                      <h5 className="text-amber-500 text-sm"> DESIGN</h5>
                       <span className="text-black lg:text-2xl">
                         {element.client}
                       </span>
@@ -76,7 +76,7 @@ function Portfolio() {
                 >
                   <RevealOnScroll to={transitionElement}>
                     <div className="h-[fit] w-[fit]">
-                      <div className="w-[100%] min-h-[200px] h-[30%] mb-[10px] md:w-[35vw] ">
+                      <div className="w-[100%] min-h-[200px] h-[30%] mb-[10px] md:w-[35vw] md:scale-[90%] md:ml-[-15px] md:mb-[0px]">
                         <ImageComponent
                           image={element.coverImage}
                         ></ImageComponent>
@@ -100,11 +100,13 @@ function Portfolio() {
 
 export default Portfolio;
 
-type postData = {
+export type postData = {
   _id: string;
   slug: { current: string };
   client: string;
   coverImage: { asset: { _ref: string; type: string } };
+  projectImages:Array<{ asset: { _ref: string; type: string } }>;
+  desc:Array<{children:Array<{marks:Array<{text:string}>}>}>;
 };
 
 // sanityImageUrl.ts

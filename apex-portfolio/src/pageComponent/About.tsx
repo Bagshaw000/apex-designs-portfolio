@@ -2,6 +2,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { RevealOnScroll } from "../components/ui/transition";
+import people from "../assets/people.jpg"
+import studio from "../assets/studio.jpg"
+import ethnic from "../assets/ethnic.jpg"
 
 function About() {
   const [isActive, setIsActive] = useState(false);
@@ -17,12 +20,12 @@ function About() {
 
   const review: number[] = [3, 1, 2];
   return (
-    <>
-      <div className="text-black px-[10vw]  mb-[20px] lg:my-[60px] max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen lg:px-[10vw] xl:px-[5vw] lg:items-center">
-        <div className="lg:w-[50%] lg:max-w-[500px]">
-          <div className="my-16 lg:w-[inherit]">
+    <div className=" ">
+      <div className="text-black  px-[10vw]  w-[100vw] mb-[20px] lg:my-[60px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[15vw] lg:items-center 2xl:max-w-[2500px] ">
+        <div className="lg:w-[50%]  xl:w-[50%] mr-[30px]">
+          <div className="my-16 lg:w-[100%]">
             <RevealOnScroll to={transitionElement}>
-              <h1 className="text-4xl font-thin lg:text-6xl w-[inherit]">
+              <h1 className="text-4xl font-thin lg:text-7xl w-[100%] ">
                 <b className={`font-medium`}>
                   Discover<br className="hidden lg:block"></br> Our
                 </b>{" "}
@@ -30,7 +33,7 @@ function About() {
               </h1>
             </RevealOnScroll>
           </div>
-          <div className="text-sm lg:max-w-[400px]">
+          <div className="text-sm lg:text-lg lg:max-w-[100%]">
             <RevealOnScroll to={transitionElement}>
               <h6 className="mb-[35px] text-[#42424298]">
                 At <b>Apex Designs</b>, creativity meets strategy. We are a
@@ -58,7 +61,7 @@ function About() {
           <RevealOnScroll to={transitionElement}>
             <div className=" flex flex-row justify-start items-center my-[60px] max-w-[1500px] ml-0">
               <div className="w-[60px] h-[60px]  min-w-[60px] bg-gray rounded-[40px] mr-[20px]">
-                <div></div>
+                <img src={ethnic} alt="" className="object-cover h-[100%] rounded-[40px]" />
               </div>
               <div className="min-w-[200px]">
                 <span className="text-black text-wrap font-light ">
@@ -73,14 +76,16 @@ function About() {
         <div>
           <RevealOnScroll to={transitionElement}>
             <div className="max-w-[1500px] mx-auto">
-              <div className=" w-[iherit]  min-h-[600px] bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[600px]  lg:w-[400px] lg:max-w-[500px] max-w-[1500px] lg:mb-0"></div>
+              <div className=" w-[iherit]  min-h-[600px] bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[700px]  lg:w-[450px] lg:max-w-[500px] max-w-[1500px] lg:mb-0">
+                <img src={studio} alt="" className="object-cover h-[100%] " />
+              </div>
             </div>
           </RevealOnScroll>
         </div>
       </div>
 
       {/* Services */}
-      <div className="bg-black w-screen text-sm  px-[5vw] py-[80px] h-[fit] lg:pb-0  ">
+      <div className="bg-black w-screen text-sm lg:text-base px-[5vw] py-[80px] h-[fit] lg:pb-0  ">
         <RevealOnScroll to={transitionElement}>
           <div className="w-[60%] mx-auto text-center md:w-[30%]  md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
             <span className="text-[#e8e8eb70]">
@@ -92,7 +97,7 @@ function About() {
         <RevealOnScroll to={transitionElement}>
           <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[150px]  text-white">
             <div className="text-center  mb-0 mx-auto md:flex md:flex-row md:items-center md:w-fit md:mx-auto md:mt-[80px]">
-              <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]"></div>
+              <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]"><img src={people} alt="" className="object-cover h-[100%] w-[100%] rounded-[40px]" /></div>
               <h1 className="sm:  font-thine text-4xl w-[inherit] mt-[60px] md:mt-0  md:w-fit  md:text-6xl">
                 <b className="font-medium">Unique</b> Ideas
               </h1>
@@ -126,17 +131,17 @@ function About() {
         </RevealOnScroll>
 
         <RevealOnScroll to={transitionElement}>
-          <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] lg:justify-center lg:flex-row lg:mb-0">
+          <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] xl:w-[1050px] lg:justify-center lg:flex-row lg:mb-0">
             <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row">
               <RevealOnScroll to={transitionElement}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
-                    <h2 className="text-start font-medium text-base">
+                    <h2 className="text-start font-medium text-base lg:text-xl">
                       {" "}
                       Brand and Identity Design
                     </h2>
 
-                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
+                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
                       Our expert team crafts impactful brand identities, from
                       custom logos to comprehensive brand guides, to help your
                       business thrive.
@@ -149,14 +154,14 @@ function About() {
               </RevealOnScroll>
 
               <RevealOnScroll to={transitionElement}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
-                    <h2 className="text-start font-medium text-base">
+                    <h2 className="text-start font-medium text-base lg:text-xl">
                       {" "}
                       Digital Marketing
                     </h2>
 
-                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
+                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
                       Driving growth with SEO optimization, brand strategy,
                       social optimization, content and copywriting, social media
                       management, and paid ads.
@@ -170,14 +175,14 @@ function About() {
             </div>
 
             <RevealOnScroll to={transitionElement}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px]">
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
                 <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
-                  <h2 className="text-start font-medium text-base">
+                  <h2 className="text-start font-medium text-base lg:text-xl">
                     {" "}
                     Brand Audit and Consultation
                   </h2>
 
-                  <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70]">
+                  <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
                     We analyze your brand's current positioning and provide
                     expert guidance to enhance its impact and market presence.
                   </h5>
@@ -193,10 +198,10 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
-        <div className="mb-[50px] lg:w-[45%]">
+      <div className="px-[10vw] py-[70px] lg:my-[50px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1500px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
+        <div className="mb-[50px] lg:w-[45%] lg:mr-[30px]">
           <RevealOnScroll to={transitionElement}>
-            <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
+            <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-7xl ">
               <b className="font-medium">
                 Meet <br className="hidden sm:block" />
                 Our Team
@@ -204,7 +209,7 @@ function About() {
             </h1>
           </RevealOnScroll>
 
-          <div className="text-sm font-thin md:text-base lg:max-w-[300px]">
+          <div className="text-base lg:text-lg font-normal  ">
             <RevealOnScroll to={transitionElement}>
               <h5 className=" text-[#42424298] mb-[35px]">
                 We are talented individuals who are passionate about bringing
@@ -289,7 +294,7 @@ function About() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
