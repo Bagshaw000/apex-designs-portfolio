@@ -2,9 +2,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { RevealOnScroll } from "../components/ui/transition";
-import people from "../assets/people.jpg"
-import studio from "../assets/studio.jpg"
-import ethnic from "../assets/ethnic.jpg"
+import ethnic from "../assets/ethnic.jpg";
+import people from "../assets/people.jpg";
+import studio from "../assets/studio.jpg";
 
 function About() {
   const [isActive, setIsActive] = useState(false);
@@ -21,7 +21,7 @@ function About() {
   const review: number[] = [3, 1, 2];
   return (
     <div className=" ">
-      <div className="text-black  px-[10vw]  w-[100vw] mb-[20px] lg:my-[60px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[15vw] lg:items-center 2xl:max-w-[2500px] ">
+      <div className="text-black px-[10vw]  w-[100vw] mb-[20px] lg:my-[60px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[20vw] lg:items-center 2xl:max-w-[2500px] ">
         <div className="lg:w-[50%]  xl:w-[50%] mr-[30px]">
           <div className="my-16 lg:w-[100%]">
             <RevealOnScroll to={transitionElement}>
@@ -33,7 +33,7 @@ function About() {
               </h1>
             </RevealOnScroll>
           </div>
-          <div className="text-sm lg:text-lg lg:max-w-[100%]">
+          <div className="text-sm font-light lg:text-lg lg:max-w-[100%]">
             <RevealOnScroll to={transitionElement}>
               <h6 className="mb-[35px] text-[#42424298]">
                 At <b>Apex Designs</b>, creativity meets strategy. We are a
@@ -61,7 +61,11 @@ function About() {
           <RevealOnScroll to={transitionElement}>
             <div className=" flex flex-row justify-start items-center my-[60px] max-w-[1500px] ml-0">
               <div className="w-[60px] h-[60px]  min-w-[60px] bg-gray rounded-[40px] mr-[20px]">
-                <img src={ethnic} alt="" className="object-cover h-[100%] rounded-[40px]" />
+                <img
+                  src={ethnic}
+                  alt={studio}
+                  className="object-cover h-[100%] w-[100%] rounded-[40px]"
+                />
               </div>
               <div className="min-w-[200px]">
                 <span className="text-black text-wrap font-light ">
@@ -77,7 +81,11 @@ function About() {
           <RevealOnScroll to={transitionElement}>
             <div className="max-w-[1500px] mx-auto">
               <div className=" w-[iherit]  min-h-[600px] bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[700px]  lg:w-[450px] lg:max-w-[500px] max-w-[1500px] lg:mb-0">
-                <img src={studio} alt="" className="object-cover h-[100%] " />
+                <img
+                  src={studio}
+                  alt={studio}
+                  className="object-cover h-[100%] w-[100%] "
+                />
               </div>
             </div>
           </RevealOnScroll>
@@ -89,7 +97,7 @@ function About() {
         <RevealOnScroll to={transitionElement}>
           <div className="w-[60%] mx-auto text-center md:w-[30%]  md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
             <span className="text-[#e8e8eb70]">
-              Professionals focused on helping your brand grow and move forward 
+              Professionals focused on helping your brand grow and move forward
             </span>
           </div>
         </RevealOnScroll>
@@ -97,7 +105,14 @@ function About() {
         <RevealOnScroll to={transitionElement}>
           <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[150px]  text-white">
             <div className="text-center  mb-0 mx-auto md:flex md:flex-row md:items-center md:w-fit md:mx-auto md:mt-[80px]">
-              <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]"><img src={people} alt="" className="object-cover h-[100%] w-[100%] rounded-[40px]" /></div>
+              <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]">
+               
+                <img
+                  src={people}
+                  alt={studio}
+                  className="object-cover h-[100%] w-[100%] rounded-[40px]"
+                />
+              </div>
               <h1 className="sm:  font-thine text-4xl w-[inherit] mt-[60px] md:mt-0  md:w-fit  md:text-6xl">
                 <b className="font-medium">Unique</b> Ideas
               </h1>
@@ -120,7 +135,10 @@ function About() {
                     </div>
 
                     <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
-                      <FontAwesomeIcon icon={faArrowRight} style={{color:"orange"}} />
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        style={{ color: "orange" }}
+                      />
                     </div>
                   </div>
                 </a>
@@ -134,7 +152,7 @@ function About() {
           <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] xl:w-[1050px] lg:justify-center lg:flex-row lg:mb-0">
             <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row">
               <RevealOnScroll to={transitionElement}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px] lg:max-w-[350px]">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       {" "}
@@ -147,14 +165,17 @@ function About() {
                       business thrive.
                     </h5>
                     <div className="w-[45px] h-[45px] bg-amber-500 rounded-[35px]  flex flex-row justify-center items-center ">
-                      <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        style={{ color: "black" }}
+                      />
                     </div>
                   </div>
                 </div>
               </RevealOnScroll>
 
               <RevealOnScroll to={transitionElement}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px]">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       {" "}
@@ -167,7 +188,10 @@ function About() {
                       management, and paid ads.
                     </h5>
                     <div className="w-[45px] h-[45px] bg-amber-500 rounded-[35px]  flex flex-row justify-center items-center ">
-                      <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        style={{ color: "black" }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -175,7 +199,7 @@ function About() {
             </div>
 
             <RevealOnScroll to={transitionElement}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[300px] xl:max-w-[350px]">
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px]">
                 <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                   <h2 className="text-start font-medium text-base lg:text-xl">
                     {" "}
@@ -187,7 +211,10 @@ function About() {
                     expert guidance to enhance its impact and market presence.
                   </h5>
                   <div className="w-[45px] h-[45px] bg-amber-500 rounded-[35px]  flex flex-row justify-center items-center ">
-                    <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      style={{ color: "black" }}
+                    />
                   </div>
                 </div>
               </div>
@@ -198,10 +225,10 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:my-[50px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1500px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
-        <div className="mb-[50px] lg:w-[45%] lg:mr-[30px]">
+      <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
+        <div className="mb-[50px] lg:w-[45%]">
           <RevealOnScroll to={transitionElement}>
-            <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-7xl ">
+            <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
               <b className="font-medium">
                 Meet <br className="hidden sm:block" />
                 Our Team
@@ -209,7 +236,7 @@ function About() {
             </h1>
           </RevealOnScroll>
 
-          <div className="text-base lg:text-lg font-normal  ">
+          <div className="text-sm font-light md:text-base lg:max-w-[300px]">
             <RevealOnScroll to={transitionElement}>
               <h5 className=" text-[#42424298] mb-[35px]">
                 We are talented individuals who are passionate about bringing
@@ -251,7 +278,6 @@ function About() {
           </RevealOnScroll>
         </div> */}
 
-
         <div className="w-[inherit] flex flex-col justify-between h-[2450px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[500px] lg:max-w-[500px] lg:h-[700px] lg:py-auto">
           <div className="flex flex-col h-[1200px] justify-between sm:h-[1125px] lg:h-[650px] lg:w-[50%] lg:items-start ">
             <RevealOnScroll to={transitionElement}>
@@ -263,7 +289,6 @@ function About() {
           </div>
           <div className="flex flex-col justify-between h-[1200px] sm:h-[1125px] lg:h-[650px] lg:py-auto lg:w-[50%] lg:items-end">
             <RevealOnScroll to={transitionElement}>
-              
               <div className="w-[80vw] mx-auto  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:h-[300px]"></div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement}>
