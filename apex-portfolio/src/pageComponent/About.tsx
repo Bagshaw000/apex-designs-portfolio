@@ -80,11 +80,11 @@ function About() {
         <div>
           <RevealOnScroll to={transitionElement}>
             <div className="max-w-[1500px] mx-auto">
-              <div className=" w-[iherit]  min-h-[600px] bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[700px]  lg:w-[450px] lg:max-w-[500px] max-w-[1500px] lg:mb-0">
+              <div className=" w-[iherit]   bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[700px]  lg:w-[450px] lg:max-w-[500px] max-w-[1500px] lg:mb-0">
                 <img
                   src={studio}
                   alt={studio}
-                  className="object-cover h-[100%] w-[100%] "
+                  className="object-cover h-[inherit] w-[inherit] "
                 />
               </div>
             </div>
