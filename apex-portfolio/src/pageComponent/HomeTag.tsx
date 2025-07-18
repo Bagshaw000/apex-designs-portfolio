@@ -36,7 +36,7 @@ export default function HomeTag() {
 
         <div className=" flex flex-wrap sm:flex-row justify-between items-center max-w-[430px] mb-[10%]">
           <a
-            href=""
+            href="/services"
             className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5"
           >
             <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
@@ -53,7 +53,7 @@ export default function HomeTag() {
             </div>
           </a>
           <a
-            href=""
+            href="/portfolio"
             className=" py-[auto]  rounded-[40px] text-[bg-black] w-[170px] h-[60px] flex flex-row justify-center mr-[20px]"
           >
             <div className=" justify-between items-center flex flex-row w-[inherit] ">

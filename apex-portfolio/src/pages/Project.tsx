@@ -32,7 +32,7 @@ function Project() {
       // return posts;
     };
     getPosts();
-  }, [post]);
+  }, []);
   return (
     <>
       <div className="relative font-outfit">
@@ -100,7 +100,7 @@ function Project() {
 
               {post ? (
                 post!.projectImages.map((element) => (
-                  <div className="mb-[10px] w-[100%] min-h-[200px] h-[30%] lg:w-[90%] lg:h-[500px] lg:mb-[50px] ">
+                  <div  key={element.asset._ref} className="mb-[10px] w-[100%] min-h-[200px] h-[30%] lg:w-[90%] lg:h-[500px] lg:mb-[50px] ">
                     <ImageComponent
                       image={element}
                       key={element.asset._ref}
