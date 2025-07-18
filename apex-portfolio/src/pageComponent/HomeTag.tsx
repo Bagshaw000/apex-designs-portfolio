@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HomeTag() {
   return (
-    <div className=" h-screen w-screen min-h-fit bg-black px-[10vw] relative z-0 top-0">
+    <div className=" h-screen w-screen min-h-fit bg-black px-[10vw] relative z-0 top-0 mt-[100px]">
       {/* <div className="z-1000 text-pink-500">
         <svg viewBox="0 0 128 128" className="w-8 h-8 fill-gray">
           <path
