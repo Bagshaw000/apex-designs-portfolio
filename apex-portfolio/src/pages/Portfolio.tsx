@@ -2,6 +2,14 @@ import { useEffect, useState } from "react";
 import Footer from "../pageComponent/Footer";
 import Header from "../pageComponent/Header";
 import { client } from "../../portfolio/client";
+import imageUrlBuilder from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import type { SanityImageObject } from "@sanity/image-url/lib/types/types";
+import { Link } from "react-router";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { RevealOnScroll } from "../components/ui/transition";
+
 function Portfolio() {
   const [post, setPost] = useState<postData[]>([]);
   const POSTS_QUERY = `*[
@@ -105,21 +113,10 @@ export type postData = {
   slug: { current: string };
   client: string;
   coverImage: { asset: { _ref: string; type: string } };
-  projectImages:Array<{ asset: { _ref: string; type: string } }>;
-  desc:Array<{children:Array<{marks:Array<{text:string}>}>}>;
+  projectImages: Array<{ asset: { _ref: string; type: string } }>;
+  desc: Array<{ children: Array<{ marks: Array<{ text: string }> }> }>;
 };
 
-// sanityImageUrl.ts
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-
-import type { SanityImageObject } from "@sanity/image-url/lib/types/types";
-import { Link } from "react-router";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { RevealOnScroll } from "../components/ui/transition";
-// import { client } from './client' // see example client config
-// Create an image URL builder using the client
 const builder = imageUrlBuilder(client);
 // Export a function that can be used to get image URLs
 export function urlFor(source: SanityImageSource) {
@@ -132,9 +129,7 @@ export function ImageComponent({ image }: { image: SanityImageObject }) {
       src={urlFor(image).url()}
       className="object-cover object-center w-[inherit] h-[inherit]"
 
-      // Depending on your schema, you may need to adjust the alt text location
-      // and update types to match your schema.
-      // alt={(image) || 'Image'}
+     
     />
   );
 }

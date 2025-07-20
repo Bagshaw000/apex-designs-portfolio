@@ -21,7 +21,7 @@ function About() {
   const review: number[] = [3, 1, 2];
   return (
     <div className=" ">
-      <div className="text-black px-[10vw]  w-[100vw] mb-[20px] lg:my-[60px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[20vw] lg:items-center 2xl:max-w-[2500px] ">
+      <div className="text-black px-[10vw]  w-[100vw] my-[50px] lg:my-[60px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[20vw] lg:items-center 2xl:max-w-[2500px] ">
         <div className="lg:w-[50%]  xl:w-[50%] mr-[30px]">
           <div className="my-16 lg:w-[100%]">
             <RevealOnScroll to={transitionElement}>
@@ -33,7 +33,7 @@ function About() {
               </h1>
             </RevealOnScroll>
           </div>
-          <div className="text-sm font-light lg:text-lg lg:max-w-[100%]">
+          <div className="text-sm font-light lg:text-base lg:max-w-[100%]">
             <RevealOnScroll to={transitionElement}>
               <h6 className="mb-[35px] text-[#42424298]">
                 At <b>Apex Designs</b>, creativity meets strategy. We are a
@@ -95,7 +95,7 @@ function About() {
       {/* Services */}
       <div className="bg-black w-screen text-sm lg:text-base px-[5vw] py-[80px] h-[fit] lg:pb-0  ">
         <RevealOnScroll to={transitionElement}>
-          <div className="w-[60%] mx-auto text-center md:w-[30%]  md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
+          <div className="w-[60%] mx-auto text-center md:w-[30%] mt-[20px] md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
             <span className="text-[#e8e8eb70]">
               Professionals focused on helping your brand grow and move forward
             </span>
@@ -103,7 +103,7 @@ function About() {
         </RevealOnScroll>
 
         <RevealOnScroll to={transitionElement}>
-          <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[150px]  text-white">
+          <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[200px]  text-white">
             <div className="text-center  mb-0 mx-auto md:flex md:flex-row md:items-center md:w-fit md:mx-auto md:mt-[80px]">
               <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]">
                

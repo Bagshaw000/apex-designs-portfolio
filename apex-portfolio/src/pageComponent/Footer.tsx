@@ -3,11 +3,50 @@ import { faBehance, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router";
 import { RevealOnScroll } from "../components/ui/transition";
-
+import { useState } from "react";
 
 function Footer() {
   const transitionElement =
     "transition-opacity duration-1000 animate-in fade-in delay-200 slide-in-from-bottom-8 ease-in-out slide-out-to-top-2 ";
+
+  const [email, setEmail] = useState("");
+
+  const [disable, setDisable] = useState(true);
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    setDisable(false);
+    const date = new Date();
+
+    const inputValue: { [key: string]: string } = {
+      Email: email,
+      CreatedAt: date.toLocaleString(),
+    };
+    console.log(inputValue);
+    const APP_ID = import.meta.env.VITE_EMAIL_ID;
+    const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`;
+    const formData = new FormData();
+    Object.keys(inputValue).forEach((key) => {
+      formData.append(key, inputValue[key]);
+    });
+
+    try {
+      const res = await fetch(baseURL, {
+        method: "POST",
+        body: formData,
+      });
+      if (res.ok) {
+        setEmail("");
+
+        setDisable(true);
+        alert(`Sucessfully subscribed`);
+      } else {
+        setDisable(true);
+        alert(`Error subscribed`);
+      }
+    } catch (e) {
+      console.error("Error during fetch:", e);
+    }
+  };
   return (
     <div className="bg-black flex-col px-[8vw] py-[100px] font-outfit mb-0 w-[100vw] bottom-0 relative">
       <div className="flex flex-col md:flex-row md:justify-between max-w-[1500px] md:mx-auto">
@@ -28,52 +67,56 @@ function Footer() {
 
           <RevealOnScroll to={transitionElement}>
             <div className="relative">
-              <input
-                type="email"
-                name=""
-                id=""
-                placeholder="ENTER YOUR EMAIL"
-                className="w-full min-h-[85px] bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[50px] pl-[40px] md:min-h-[80px]"
-              />
-              <div className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
-                <FontAwesomeIcon icon={faArrowRight} style={{color:"black"}} />
-              </div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  id=""
+                  placeholder="ENTER YOUR EMAIL"
+                  className="w-full min-h-[85px] bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[50px] pl-[40px] md:min-h-[80px]"
+                />
+                {disable ? (
+                  <button className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      style={{ color: "black" }}
+                    />
+                  </button>
+                ) : (
+                  <button
+                    disabled
+                    className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]"
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      style={{ color: "black" }}
+                    />
+                  </button>
+                )}
+              </form>
             </div>
           </RevealOnScroll>
         </div>
         <div className="flex flex-col justify-between text-xl font-medium h-[250px] md:h-[200px]  md:w-[20%]">
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit ">
-              {ActiveLink("/", "Home")}
-            </div>
+            <div className="h-fit ">{ActiveLink("/", "Home")}</div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit ">
-              
-              {ActiveLink("/services", "Services")}
-            </div>
+            <div className="h-fit ">{ActiveLink("/services", "Services")}</div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit">
-             
-              {ActiveLink("/portfolio", "Portfolio")}
-            </div>
+            <div className="h-fit">{ActiveLink("/portfolio", "Portfolio")}</div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit">
-              
-              {ActiveLink("/contact", "Contact")}
-            </div>
+            <div className="h-fit">{ActiveLink("/contact", "Contact")}</div>
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit">
-              {ActiveLink("/blog", "Blog")}
-            
-            </div>
+            <div className="h-fit">{ActiveLink("/blog", "Blog")}</div>
           </RevealOnScroll>
         </div>
         <div className=" md:w-[20%]">
@@ -110,7 +153,7 @@ function Footer() {
 export default Footer;
 
 // This function checks if the link is active
- const ActiveLink = (to: string, children: string) => {
+const ActiveLink = (to: string, children: string) => {
   const location = useLocation();
   const isActive = location.pathname === to;
   // console.log(isActive);

@@ -4,10 +4,58 @@ import Header from "../pageComponent/Header";
 import { faArrowDown, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RevealOnScroll } from "../components/ui/transition";
+import { useState } from "react";
+
 
 function Contact() {
   const transitionElement =
     "animate-in ease-out slide-in-from-bottom-11 duration-700 fade-in";
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [project, setProject] = useState("");
+  const [disable, setDisable] = useState(true)
+  const handleSubmit = async (event:any) => {
+    event.preventDefault();
+    setDisable(false)
+   const date = new Date()
+    
+    // await sEmail(project,name,email)
+    const inputValue: {[key:string]:string} = {
+      'Email': email,
+      'Name': name,
+      'Project': project,
+      'CreatedAt': date.toLocaleString(),
+    }
+ 
+    const APP_ID = import.meta.env.VITE_APP_ID
+    const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`
+    const formData = new FormData()
+    Object.keys(inputValue).forEach((key) => {
+      formData.append(key, inputValue[key])
+    })
+
+    try {
+       const res = await fetch(baseURL, {
+        method: 'POST',
+        body: formData,
+       })
+      if(res.ok){
+       
+        setEmail('')
+        setName('')
+        setProject('')
+        setDisable(true)
+        alert(`Enquiry submitted sucessfully`);
+      }else{
+        
+        setDisable(true)      
+         alert(`Error submitting Enquiry`);
+      }
+    }catch(e){
+      console.error('Error during fetch:', e);
+    }
+
+  };
   return (
     <>
       <div className="relative font-outfit">
@@ -59,58 +107,74 @@ function Contact() {
             <div>
               <RevealOnScroll to={transitionElement}>
                 <form
-                  action=""
-                  method="post"
+                  onSubmit={handleSubmit}
                   className="flex flex-col font-light text-xs"
                 >
-                    <RevealOnScroll to={transitionElement}>
-                  <div className="flex flex-col lg:flex-row lg:justify-between">
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="WHAT'S YOUR NAME"
-                      className="border-0 border-b-[0.2px] h-[70px] py-[auto] text-sm mb-[20px] lg:w-[48%]"
-                    />
-                    <input
-                      type="email"
-                      name=""
-                      id=""
-                      placeholder="YOUR EMAIL"
-                      className="border-0 border-b-[0.2px] h-[70px] text-sm  mb-[20px] lg:w-[48%]"
-                    />
-                  </div>
+                  <RevealOnScroll to={transitionElement}>
+                    <div className="flex flex-col lg:flex-row lg:justify-between">
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        id=""
+                        placeholder="WHAT'S YOUR NAME"
+                        className="border-0 border-b-[0.2px] text-greyam h-[70px] py-[auto] text-sm mb-[20px] lg:w-[48%]"
+                      />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        id=""
+                        placeholder="YOUR EMAIL"
+                        className="border-0 border-b-[0.2px] text-greyam h-[70px] text-sm  mb-[20px] lg:w-[48%]"
+                      />
+                    </div>
                   </RevealOnScroll>
-                    <RevealOnScroll to={transitionElement}>
-                  <textarea
-                    name=""
-                    id=""
-                    placeholder="TELL US ABOUT YOU PROJECT"
-                    className="border-0 border-b-[0.2px] text-sm h-[250px] w-[100%]"
-                  ></textarea>
+                  <RevealOnScroll to={transitionElement}>
+                    <textarea
+                      name="project"
+                      value={project}
+                      onChange={(e) => setProject(e.target.value)}
+                      id=""
+                      placeholder="TELL US ABOUT YOU PROJECT"
+                      className="border-0 border-b-[0.2px] text-greyam text-sm h-[250px] w-[100%]"
+                    ></textarea>
                   </RevealOnScroll>
-                    <RevealOnScroll to={transitionElement}>
-                  <div className="my-[50px] flex flex-col h-[130px] justify-between lg:items-center lg:my-[20px] lg:flex-row">
-                    <span className="text-[#42424298]  text-base">
-                      <span className="text-amber-500">*</span>We promise not to
-                      disclose your personal information to third parties
-                    </span>
-
-                    <button className="w-[250px]  text-black rounded-full bg-amber-500 py-[10px] px-[15px] h-[70px]">
-                      {" "}
-                      <div className="flex flex-row justify-between items-center">
-                        <span className="ml-[20px] text-[15px]">
-                          SEND MESSAGE
-                        </span>
-                        <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
-                          <FontAwesomeIcon
-                            icon={faArrowRight}
-                            style={{ color: "orange" }}
-                          />
-                        </div>
-                      </div>{" "}
-                    </button>
-                  </div>
+                  <RevealOnScroll to={transitionElement}>
+                    <div className="my-[50px] flex flex-col h-[130px] justify-between lg:items-center lg:my-[20px] lg:flex-row">
+                      <span className="text-[#42424298]  text-base">
+                        <span className="text-amber-500">*</span>We promise not
+                        to disclose your personal information to third parties
+                      </span>
+                      {disable ? <button  className="w-[250px]  text-black rounded-full bg-amber-500 py-[10px] px-[15px] h-[70px]">
+                        {" "}
+                        <div className="flex flex-row justify-between items-center">
+                          <span className="ml-[20px] text-[15px]">
+                            SEND MESSAGE
+                          </span>
+                          <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
+                            <FontAwesomeIcon
+                              icon={faArrowRight}
+                              style={{ color: "orange" }}
+                            />
+                          </div>
+                        </div>{" "}
+                      </button>:<button disabled className="w-[250px]  text-black rounded-full bg-amber-500 py-[10px] px-[15px] h-[70px]">
+                        {" "}
+                        <div className="flex flex-row justify-between items-center">
+                          <span className="ml-[40px] text-[15px]">
+                            SENDING...
+                          </span>
+                          <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
+                            <FontAwesomeIcon
+                              icon={faArrowRight}
+                              style={{ color: "orange" }}
+                            />
+                          </div>
+                        </div>{" "}
+                      </button>}
+                      
+                    </div>
                   </RevealOnScroll>
                 </form>
               </RevealOnScroll>

@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HomeTag() {
   return (
-    <div className=" h-screen w-screen min-h-fit bg-black px-[10vw] relative z-0 top-0 mt-[100px]">
+    <div className=" h-screen w-[100vw] min-h-fit bg-black px-[10vw] relative z-0 top-0 mt-[100px]">
       {/* <div className="z-1000 text-pink-500">
         <svg viewBox="0 0 128 128" className="w-8 h-8 fill-gray">
           <path
@@ -18,12 +18,12 @@ export default function HomeTag() {
           />
         </svg>
       </div> */}
-      <div className="w-fit lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[5vw] flex flex-col justify-end  bottom-0  items-start   h-[inherit] ">
+      <div className="w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[5vw] flex flex-col justify-end  bottom-0  items-start   h-[inherit] ">
         <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col  text-white lg:text-7xl 2xl:text-[120px]">
-          <h1 className="sm:font-outfit font-thin text-5xl w-full mb-[10px]   ">
+          <h1 className="sm:font-outfit font-thin text-5xl w-[inherit] mb-[10px]   ">
             <b className="font-medium lg:mb-[5px]">Shaping</b> Tomorrow’s
           </h1>
-          <h1 className="sm:font-outfit font-thin text-5xl w-full mb-[60px]  ">
+          <h1 className="sm:font-outfit font-thin text-5xl w-[inherit] mb-[60px]  ">
             <b className="font-medium"> Brands </b> Today
           </h1>
         </p>
