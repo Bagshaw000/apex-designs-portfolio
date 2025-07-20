@@ -131,11 +131,12 @@ function Footer() {
           <div className="mt-10 md:mt-6">
             <RevealOnScroll to={transitionElement}>
               <div className="flex flex-row justify-between w-[50px]">
-                <FontAwesomeIcon
+                <a href="https://www.instagram.com/apex.designsolutions/"> <FontAwesomeIcon
                   icon={faInstagram}
                   style={{ color: "#ffffff" }}
                   size="1x"
-                />
+                /></a>
+                
                 <FontAwesomeIcon
                   icon={faBehance}
                   style={{ color: "#ffffff" }}
