@@ -1,4 +1,5 @@
-import whiteLogo from "../assets/whiteLogo.svg";
+import whiteLogo from "../assets/Synergis_Full_White_Transparent.svg";
+import whiteMobileLogo from "../assets/Synergis_Favicon_White_Transparent.svg";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import NotesIcon from "@mui/icons-material/Notes";
@@ -27,11 +28,14 @@ function Header() {
     "h-fit hover:translate-x-5 transform transition-transform animate-in fade-in ease-out duration-2000";
 
   return (
-    <div className="">
-      <div className=" bg-black fixed right-0 left-0 z-50 border-b-[0.2px] border-[#7373734f]   h-[100px] max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw]  inset-x-0 top-0">
+    <div className="sticky top-0 z-50 bg-black  ">
+      <div className=" right-0 left-0 border-b-[0.2px] border-[#7373734f]   h-[100px] max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw] ">
         <div className="flex flex-row h-[inherit] my-auto justify-between items-center ">
-          <div className="w-1/5 min-w-[60px] bg-white-logo">
-            <img src={whiteLogo} alt="" className="h-[80px] " />
+          <div className="sm:w-1/5 sm:block hidden bg-white-logo transition-opacity ease-in-out duration-2000">
+            <img src={whiteLogo} alt="" className=" w-full " />
+          </div>
+           <div className="w-1/5 sm:hidden block bg-white-logo transition-opacity ease-in-out duration-2000">
+            <img src={whiteMobileLogo} alt="" className=" w-full " />
           </div>
 
           <div>
