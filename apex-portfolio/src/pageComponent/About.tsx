@@ -17,16 +17,17 @@ function About() {
   };
 
   const transitionElement =
-    "animate-in  ease-in slide-in-from-bottom-11 duration-700 fade-in ease-out";
+    "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
-    const transitionOutElement = "animate-in  ease-in slide-in-from-bottom-11 duration-700 fade-in"
+  const transitionOutElement =
+    "animate-in  ease-in slide-in-from-bottom-11 duration-700 fade-in";
   const review: number[] = [3, 1, 2];
   return (
     <div className="z-50 ">
       <div className="text-black px-[10vw]  w-[100vw] my-[70px] lg:my-[150px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[15vw] lg:items-center 2xl:max-w-[2500px] ">
         <div className="lg:w-[48%]  xl:w-[48%] ">
           <div className="my-16 lg:w-[100%]">
-            <RevealOnScroll to={transitionElement}  >
+            <RevealOnScroll to={transitionElement}>
               <h1 className="text-4xl font-thin lg:text-7xl w-[100%] ">
                 <b className={`font-medium`}>
                   Discover<br className="hidden lg:block"></br> Our
@@ -36,27 +37,29 @@ function About() {
             </RevealOnScroll>
           </div>
           <div className="text-sm font-light lg:text-base lg:max-w-[100%]">
-            <RevealOnScroll to={transitionElement}  from={""} >
+            <RevealOnScroll to={transitionElement} from={""}>
               <h6 className="mb-[35px] text-[#42424298]">
-                At <b>Apex Designs</b>, creativity meets strategy. We are a
-                passionate collective of visionaries, innovators, and problem
-                solvers driven to turn ideas into impactful realities. With
-                expertise spanning design and digital marketing, our diverse
-                talents blend seamlessly to craft compelling solutions that
-                elevate your brand and engage your audience. Together, we build
-                experiences that inspire and deliver measurable success for
-                every client we serve
+                At <b>Synergis Design Solutions</b>, we believe great design
+                starts with alignment. We focus on uncovering the natural
+                synergy between your vision and our creative expertise so every
+                solution we craft not only captivates visually but also delivers
+                measurable impact. We collaborate with companies, governments,
+                and startups alike, taking the time to understand your goals,
+                challenges, and audiences. That understanding shapes our
+                process, ensuring every outcome is both strategically sound and
+                visually compelling.
               </h6>
             </RevealOnScroll>
 
             <RevealOnScroll to={transitionElement} from={""}>
               <h6 className="text-[#42424298]">
-                Collaboration fuels everything we create. Our strength lies in
-                the dynamic synergy sparked by diverse perspectives coming
-                together. This vibrant exchange of ideas fosters an atmosphere
-                of boundless creativity, where innovation flourishes. By
-                channeling our collective expertise, we deliver extraordinary
-                solutions that go beyond expectations and drive lasting impact.
+                As an end-to-end Design-as-a-Service (DaaS) partner, we support
+                you from concept to execution—whether launching something new,
+                refining what exists, or scaling for growth. Through agility,
+                expertise, and imagination, we help you move forward with
+                purpose and precision. At Synergis, design is more than a
+                service—it’s a partnership rooted in alignment, collaboration,
+                and shared ambition.
               </h6>
             </RevealOnScroll>
           </div>
@@ -80,7 +83,7 @@ function About() {
           </RevealOnScroll>
         </div>
         <div className="lg:w-[48%]  xl:w-[48%] ">
-          <RevealOnScroll to={transitionElement}from={""}>
+          <RevealOnScroll to={transitionElement} from={""}>
             <div className="max-w-[1500px] mx-auto">
               <div className=" w-[iherit] hover:scale-105 duration-300 hover:delay-50 hover:rotate-2    bg-greyam mx-auto mb-[60px] hover:scale-200 sm:min-h-[700px] md:min-h-[900px] lg:min-h-[400px]  lg:h-[700px]  lg:w-[450px] lg:max-w-[500px] max-w-[1500px] lg:mb-0">
                 <img
@@ -96,15 +99,17 @@ function About() {
 
       {/* Services */}
       <div className="bg-black w-screen text-sm lg:text-base px-[5vw] py-[100px] h-[fit]   ">
-        <RevealOnScroll to={transitionElement}  from={""}>
-          <div className="w-[60%] mx-auto text-center md:w-[30%] mt-[20px] md:text-right md:mr-24 lg:mr-[10vw] lg:w-[300px] xl:mr-[20vw]">
-            <span className="text-[#e8e8eb70]">
+        <RevealOnScroll to={transitionElement} from={""}>
+          <div className="w-[60%] mx-auto text-center md:w-[40%] mt-[20px] md:text-right md:mr-[5vw] lg:mr-[1%] lg:w-[400px] xl:mr-[2%] flex flex-row items-center">
+            <span className="text-[#e8e8eb70] mr-6">
               Professionals focused on helping your brand grow and move forward
             </span>
+
+            <hr className="hidden lg:block lg:w-[90px] text-[#e8e8eb70] " />
           </div>
         </RevealOnScroll>
 
-        <RevealOnScroll to={transitionElement}  from={""}>
+        <RevealOnScroll to={transitionElement} from={""}>
           <div className="w-[85vw] mx-auto h-fit mb-[120px] lg:mb-[200px]  text-white">
             <div className="text-center  mb-0 mx-auto md:flex md:flex-row md:items-center md:w-fit md:mx-auto md:mt-[80px]">
               <div className=" hidden md:h-[70px] md:w-[200px] bg-greyam rounded-[40px] md:block md:mr-[20px]">
@@ -119,14 +124,14 @@ function About() {
               </h1>
             </div>
 
-            <div className="text-center mt-[20px]  flex flex-col md:flex-row md:justify-center">
-              <h1 className="sm:  font-thin text-4xl w-[inherit]   mb-[60px] sm:mr-[0px] md:w-fit md:mr-[15px]  md:text-6xl md:mb-0">
+            <div className="text-start mt-[20px]  flex flex-col md:flex-row md:text-center md:justify-center">
+              <h1 className="sm:font-thin text-4xl w-[inherit]   mb-[60px] sm:mr-[0px] md:w-fit md:mr-[15px]  md:text-6xl md:mb-0">
                 <b className="font-medium"> For Your </b> Business.
               </h1>
               <div className="h-fit ">
                 <a
                   href=""
-                  className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto"
+                  className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto ease-in-out hover:scale-110 duration-1000"
                 >
                   <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
                     <div className="w-[50%] ml-[30px] ">
@@ -149,11 +154,11 @@ function About() {
           {/* Service */}
         </RevealOnScroll>
 
-        <RevealOnScroll to={transitionElement}  from={""}>
+        <RevealOnScroll to={transitionElement} from={""}>
           <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] xl:w-[1050px] lg:justify-center lg:flex-row lg:mb-0">
             <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row h-fit">
-              <RevealOnScroll to={transitionElement}  from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%]">
+              <RevealOnScroll to={transitionElement} from={""}>
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%] bg-black ease-in-out hover:scale-105  duration-1000">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Corporate Branding
@@ -178,8 +183,8 @@ function About() {
                 </div>
               </RevealOnScroll>
 
-              <RevealOnScroll to={transitionElement}  from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%]">
+              <RevealOnScroll to={transitionElement} from={""}>
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%]  bg-black ease-in-out hover:scale-105 duration-1000">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Campaign Design
@@ -205,8 +210,8 @@ function About() {
               </RevealOnScroll>
             </div>
 
-            <RevealOnScroll to={transitionElement}  from={""}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%]">
+            <RevealOnScroll to={transitionElement} from={""}>
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%]  bg-black ease-in-out hover:scale-105 duration-1000">
                 <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                   <h2 className="text-start font-medium text-base lg:text-xl">
                     Design Consulting
@@ -237,7 +242,7 @@ function About() {
 
       <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
         <div className="mb-[50px] lg:w-[45%]">
-          <RevealOnScroll to={transitionElement}  from={""}>
+          <RevealOnScroll to={transitionElement} from={""}>
             <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
               <b className="font-medium">
                 Meet <br className="hidden sm:block" />
@@ -247,7 +252,7 @@ function About() {
           </RevealOnScroll>
 
           <div className="text-sm font-light md:text-base lg:max-w-[300px]">
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <h5 className=" text-[#42424298] mb-[35px]">
                 We are talented individuals who are passionate about bringing
                 ideas to life. With a diverse range of backgrounds and skill
@@ -255,7 +260,7 @@ function About() {
                 clients.
               </h5>
             </RevealOnScroll>
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <h5 className=" text-[#42424298]">
                 Together, our creative team is committed to delivering impactful
                 work that exceeds expectations.
@@ -263,7 +268,7 @@ function About() {
             </RevealOnScroll>
           </div>
 
-          <RevealOnScroll to={transitionElement}  from={""}>
+          <RevealOnScroll to={transitionElement} from={""}>
             <div className="mt-[60px]">
               <h5 className="text-greyam font-thin text-2xl md:text-3xl">
                 We <b className="font-medium">delivering</b>{" "}
@@ -290,7 +295,7 @@ function About() {
 
         <div className="w-[inherit] flex flex-col justify-between h-[2450px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[500px] lg:max-w-[500px] lg:h-[700px] lg:py-auto">
           <div className="flex flex-col h-[1200px] justify-between sm:h-[1125px] lg:h-[650px] lg:w-[50%] lg:items-start ">
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
@@ -307,7 +312,7 @@ function About() {
                 </div>
               </div>
             </RevealOnScroll>
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
@@ -326,7 +331,7 @@ function About() {
             </RevealOnScroll>
           </div>
           <div className="flex flex-col justify-between h-[1200px] sm:h-[1125px] lg:h-[650px] lg:py-auto lg:w-[50%] lg:items-end">
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
@@ -343,7 +348,7 @@ function About() {
                 </div>
               </div>
             </RevealOnScroll>
-            <RevealOnScroll to={transitionElement}  from={""}>
+            <RevealOnScroll to={transitionElement} from={""}>
               <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
@@ -366,7 +371,7 @@ function About() {
 
       <div className="px-[10vw] bg-[#c4c4c436] py-[70px]">
         <div>
-          <RevealOnScroll to={transitionElement}  from={""}>
+          <RevealOnScroll to={transitionElement} from={""}>
             <h5 className="text-black font-thin text-4xl text-center">
               <b className="font-medium">Customer</b> Voices:{" "}
               <b className="font-medium">Hear What</b> They Say!

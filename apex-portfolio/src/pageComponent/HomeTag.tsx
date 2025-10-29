@@ -66,7 +66,7 @@ export default function HomeTag() {
         <div className=" flex flex-wrap sm:flex-row justify-between items-center max-w-[430px] mb-[10%]">
           <a
             href="/services"
-            className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5"
+            className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5 hover:scale-110 duration-1000"
           >
             <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
               <div className="w-[50%] ml-[30px]">
@@ -86,7 +86,7 @@ export default function HomeTag() {
           </a>
           <a
             href="/portfolio"
-            className=" py-[auto]  rounded-[40px] text-[bg-black] w-[170px] h-[60px] flex flex-row justify-center mr-[20px]"
+            className=" py-[auto]  rounded-[40px] text-[bg-black] w-[170px] h-[60px] flex flex-row justify-center mr-[20px]  hover:scale-110 duration-1000"
           >
             <div className=" justify-between items-center flex flex-row w-[inherit] ">
               <div className="w-[50%] ml-[30px]">
