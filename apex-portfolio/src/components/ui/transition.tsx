@@ -2,37 +2,38 @@ import { useState, useRef, useEffect, ReactNode } from "react";
 
 interface RevealOnScrollProps {
   children: ReactNode;
-  to: string;
+  to: string;   // animation or tailwind class
+  from?: string;
 }
+
 export const RevealOnScroll: React.FC<RevealOnScrollProps> = ({
   to,
   children,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const onWindScroll = () => {
+    const handleScroll = () => {
       const element = ref.current;
-      if (element) {
-        const { top } = element.getBoundingClientRect();
-        const isVisible = top < window.innerHeight;
-        setIsVisible(isVisible);
-      }
+      if (!element) return;
+
+      const { top, bottom } = element.getBoundingClientRect();
+      const inView = top < window.innerHeight && bottom > 0; // in viewport
+      setIsVisible(inView);
+
+      lastScrollY.current = window.scrollY;
     };
 
-    window.addEventListener("scroll", onWindScroll);
-    onWindScroll(); // trigger initial visibility on load
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // check on mount
 
-    return () => {
-      window.removeEventListener("scroll", onWindScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const classes = `${to} ${
-    isVisible
-      ? "opacity-100"
-      : "opacity-0 "
+    isVisible ? "opacity-100" : "opacity-0"
   }`;
 
   return (
