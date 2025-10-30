@@ -75,7 +75,7 @@ function Project() {
                   </tr>
 
                   <tr className="border-y border-[#42424226] w-[inherit] h-[40px] align-middle  md:h-[60px]">
-                    <td>DESIGNER: APEX DESIGNS</td>
+                    <td>DESIGNER: SYNERGIS DESIGNS</td>
                   </tr>
                 </tbody>
               </table>

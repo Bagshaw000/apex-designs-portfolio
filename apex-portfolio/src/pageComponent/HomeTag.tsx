@@ -11,7 +11,7 @@ export default function HomeTag() {
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
   return (
-    <div className=" sm:h-screen  w-[100vw] min-h-screen bg-black  mt-0 relative">
+    <div className=" sm:h-[100vh]  w-[100vw] min-h-screen bg-black  mt-0 relative">
       <div
         style={{ position: "absolute" }}
         className="z-10 opacity-50 h-screen w-[inherit] sm:h-screen "
@@ -19,11 +19,11 @@ export default function HomeTag() {
         <Threads amplitude={1} distance={0.5} enableMouseInteraction={true} />
       </div>
 
-      <div className=" pt-14 px-[10vw] sm:pt-0 w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[10vw] flex flex-col justify-end z-20   items-start   h-[inherit] relative ">
+      <div className=" pt-14 px-[10vw] sm:pt-0 w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[10vw] flex flex-col justify-center z-20   items-start   h-[inherit] relative ">
         <RevealOnScroll to={transitionElement} from={""}>
           <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col  text-white lg:text-7xl 2xl:text-[120px]">
             <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
-              <b className="font-semibold">Shaping</b>
+              <b className="font-semibold mr-2">Shaping</b>
               <TextType
                 text={["Tomorrow’s", "Tomorrow’s"]}
                 typingSpeed={100}
@@ -35,7 +35,7 @@ export default function HomeTag() {
             </span>
 
             <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
-              <b className="font-semibold">Brands </b>
+              <b className="font-semibold mr-2">Brands </b>
               {/* <TextType
               text={["Today", "Today"]}
               typingSpeed={150}

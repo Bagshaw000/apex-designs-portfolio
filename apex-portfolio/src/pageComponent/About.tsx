@@ -249,8 +249,8 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:flex lg:flex-row justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen  xl:max-w-[80vw]">
-        <div className="mb-[50px] lg:w-[45%]">
+      <div className="px-[10vw] py-[70px] lg:flex lg:flex-row justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen 2xl:max-w-[80vw]">
+        <div className="mb-[50px] lg:w-[45%] ">
           <RevealOnScroll to={transitionElement} from={""}>
             <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
               <b className="font-medium">
@@ -288,10 +288,10 @@ function About() {
           </RevealOnScroll>
         </div>
 
-        <div className="w-[inherit] flex flex-col justify-between h-[1750px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[475px]  lg:max-w-[500px] lg:h-[700px] lg:py-auto  ">
-          <div className="flex flex-col h-[850px] justify-between sm:h-[1125px] lg:h-[625px] lg:w-[50%] lg:items-start ">
+        <div className="w-[inherit] flex flex-col justify-between h-[1750px] sm:flex-row sm:h-[1150px] py-15  sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[50%]  lg:max-w-[50%] lg:h-[700px] lg:py-auto 2xl:max-w-[47%] ">
+          <div className="flex flex-col h-[850px] justify-between sm:h-[1125px] lg:h-[625px] lg:w-[48%] lg:items-start ">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
@@ -308,7 +308,7 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
@@ -325,9 +325,9 @@ function About() {
               </div>
             </RevealOnScroll>
           </div>
-          <div className="flex flex-col justify-between h-[850px] sm:h-[1125px] lg:h-[625px] lg:py-auto lg:w-[50%] lg:items-end">
+          <div className="flex flex-col justify-between h-[850px] sm:h-[1125px] lg:h-[625px] lg:py-auto lg:w-[48%] lg:items-end">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
@@ -344,7 +344,7 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
                 <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
