@@ -23,10 +23,9 @@ function About() {
     setIndex(index);
   };
 
-  const plugin = useRef(AutoScroll({ speed: 1,
-      stopOnInteraction: false, 
-      stopOnMouseEnter: true, 
-      }));
+  const plugin = useRef(
+    AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
 
   const transitionElement =
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
@@ -365,7 +364,7 @@ function About() {
         </div>
       </div>
 
-      <div className="px-[10vw] bg-[#c4c4c436] py-[70px]">
+      <div className="px-[10vw] bg-[#c4c4c436] py-[70px] ">
         <div>
           <RevealOnScroll to={transitionElement} from={""}>
             <h5 className="text-black font-thin text-4xl text-center">
@@ -374,28 +373,31 @@ function About() {
             </h5>
           </RevealOnScroll>
         </div>
-        <div className="flex flex-wrap justify-center">
-          {review.map((key) => (
-            <div
-              key={key}
-              className={`min-w-[70px] min-h-[70px] bg-[#c4c4c475] rounded-[60px] mx-4 my-4 outline-hidden ${
-                isActive && isIndex ? "outline-4 outline-blue-am" : ""
-              } `}
-              onClick={() => handleClick(key)}
-            ></div>
-          ))}
+        <div className="flex flex-col justify-center items-center w-[80vw]">
+          <div className="flex flex-wrap justify-center">
+            {review.map((key) => (
+              <div
+                key={key}
+                className={`min-w-[70px] min-h-[70px] bg-[#c4c4c475] rounded-[60px] mx-4 my-4 outline-hidden ${
+                  isActive && isIndex ? "outline-4 outline-blue-am" : ""
+                } `}
+                onClick={() => handleClick(key)}
+              ></div>
+            ))}
+          </div>
+
           <Carousel
-            className="w-full max-w-sm"
+            className=" max-w-[80vw] w-[80vw] mt-10"
             opts={{
               align: "start",
               loop: true,
-              duration:5,
-              direction:"ltr",
-              slidesToScroll: 1
+              duration: 5,
+              direction: "ltr",
+              slidesToScroll: 1,
             }}
-             plugins={[plugin.current]}
+            plugins={[plugin.current]}
           >
-            <CarouselContent className="-ml-1 ease-in-out">
+            <CarouselContent className="-ml-1 ease-in-out ">
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem
                   key={index}

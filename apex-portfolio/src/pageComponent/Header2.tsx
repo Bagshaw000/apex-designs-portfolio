@@ -6,10 +6,10 @@ import CloseIcon from "@mui/icons-material/Close";
 
 function Header2() {
   const [checked, setChecked] = useState(true);
-  const [headerColor, setHeaderColor] = useState("");
+  // const [headerColor, setHeaderColor] = useState("");
   const handleClick = () => {
     setChecked(!checked);
-    console.log(checked);
+    // console.log(checked);
   };
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function Header2() {
     console.log(currentBgColor);
     if (currentBgColor == "white") {
     }
-    setHeaderColor(currentBgColor);
+    // setHeaderColor(currentBgColor);
   }, []);
 
   const transitionHeader: string =

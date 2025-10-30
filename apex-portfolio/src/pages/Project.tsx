@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { client } from "../../portfolio/client";
 import Footer from "../pageComponent/Footer";
 import Header from "../pageComponent/Header";
-import { ImageComponent, postData } from "./Portfolio";
+import { ImageComponent } from "./Portfolio";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router";
