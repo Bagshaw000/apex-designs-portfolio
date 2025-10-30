@@ -21,7 +21,7 @@ export default function HomeTag() {
 
       <div className=" pt-14 px-[10vw] sm:pt-0 w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[10vw] flex flex-col justify-center z-20   items-start   h-[inherit] relative ">
         <RevealOnScroll to={transitionElement} from={""}>
-          <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col  text-white lg:text-7xl 2xl:text-[120px]">
+          <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col mb-6 text-white lg:text-7xl 2xl:text-[120px]">
             <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
               <b className="font-semibold mr-2">Shaping</b>
               <TextType
