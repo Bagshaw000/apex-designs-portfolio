@@ -11,7 +11,7 @@ export default function HomeTag() {
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
   return (
-    <div className=" sm:h-[100vh]  w-[100vw] min-h-screen bg-[#060717]  mt-0 relative">
+    <div className=" sm:h-[100vh]  w-[100vw] min-h-screen bg-[#06071a]  mt-0 relative">
       <div
         style={{ position: "absolute" }}
         className="z-10 opacity-50 h-screen w-[inherit] sm:h-screen "

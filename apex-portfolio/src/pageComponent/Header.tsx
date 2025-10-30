@@ -27,7 +27,7 @@ function Header() {
     "h-fit hover:translate-x-5 transform transition-transform animate-in fade-in ease-out duration-2000";
 
   return (
-    <div className="sticky top-0 z-50 bg-[#060717]  ">
+    <div className="sticky top-0 z-50 bg-[#06071a]  ">
       <div className=" right-0 left-0 border-b-[0.2px] border-[#7373734f]   h-[100px]  max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw] ">
         <div className="flex flex-row h-[inherit] my-auto justify-between items-center ">
           <div className="sm:w-1/5 sm:block hidden bg-white-logo transition-opacity ease-in-out duration-2000">
