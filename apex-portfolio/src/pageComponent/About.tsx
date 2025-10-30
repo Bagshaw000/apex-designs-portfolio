@@ -107,7 +107,7 @@ function About() {
       </div>
 
       {/* Services */}
-      <div className="bg-[#0D1039] w-screen text-sm lg:text-base px-[5vw] py-[100px] h-[fit]   ">
+      <div className="bg-[#060717] w-screen text-sm lg:text-base px-[5vw] py-[100px] h-[fit]   ">
         <RevealOnScroll to={transitionElement} from={""}>
           <div className="w-[60%] mx-auto text-center md:w-[40%] mt-[20px] md:text-right md:mr-[5vw] lg:mr-[1%] lg:w-[400px] xl:mr-[2%] flex flex-row items-center">
             <span className="text-[#e8e8eb70] mr-6">
@@ -167,7 +167,7 @@ function About() {
           <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] xl:w-[1050px] lg:justify-center lg:flex-row lg:mb-0">
             <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row h-fit">
               <RevealOnScroll to={transitionElement} from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%] bg-[#0D1039] ease-in-out hover:scale-105  duration-1000">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%] bg-[#060717] ease-in-out hover:scale-105  duration-1000">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Corporate Branding
@@ -193,7 +193,7 @@ function About() {
               </RevealOnScroll>
 
               <RevealOnScroll to={transitionElement} from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#0D1039] ease-in-out hover:scale-105 duration-1000">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#060717] ease-in-out hover:scale-105 duration-1000">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Campaign Design
@@ -220,7 +220,7 @@ function About() {
             </div>
 
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#0D1039] ease-in-out hover:scale-105 duration-1000">
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#060717] ease-in-out hover:scale-105 duration-1000">
                 <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                   <h2 className="text-start font-medium text-base lg:text-xl">
                     Design Consulting
