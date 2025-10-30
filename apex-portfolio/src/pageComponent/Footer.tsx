@@ -53,7 +53,7 @@ function Footer() {
           <RevealOnScroll to={transitionElement}>
             <div>
               <h5 className="text-[#d6d6d6] font-medium text-3xl ">
-                Apex Designs Solutions
+                Synergis Designs Solutions
               </h5>
             </div>
 
