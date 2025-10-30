@@ -8,6 +8,8 @@ import Portfolio from "./pages/Portfolio.tsx";
 import Contact from "./pages/Contact.tsx";
 import Project from "./pages/Project.tsx";
 // import Upload from "./pages/Upload.tsx";
+import { ThemeProvider } from "@material-tailwind/react";
+import { Toaster } from "sonner";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    
+      <RouterProvider router={router} />
+   <Toaster />
   </StrictMode>
 );

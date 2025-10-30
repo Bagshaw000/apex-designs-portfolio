@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Threads from "../components/Threads";
 import BlurText from "../components/BlurText";
-// import Header from "./Header";
 
-// import sphere from "../../../src/assets/sphere1 (1).png";
+
 
 export default function HomeTag() {
   return (
@@ -14,11 +13,11 @@ export default function HomeTag() {
         style={{ position: "absolute" }}
         className="z-10 opacity-50 h-screen w-[inherit] sm:h-screen "
       >
-        <Threads amplitude={3} distance={0.5} enableMouseInteraction={true} />
+        <Threads amplitude={1} distance={0.5} enableMouseInteraction={true} />
       </div>
-      <div className=" pt-14 px-[10vw] sm:pt-0 w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[15vw] flex flex-col justify-end z-20   items-start   h-[inherit] relative ">
+      <div className=" pt-14 px-[10vw] sm:pt-0 w-[100%] lg:max-w-full 2xl:max-w-[2500px] mx-auto lg:px-0 xl:px-[10vw] flex flex-col justify-end z-20   items-start   h-[inherit] relative ">
         <p className="w-[inherit] leading-6 flex flex-wrap lg:flex-col  text-white lg:text-7xl 2xl:text-[120px]">
-          <p className="sm:font-outfit font-thin text-5xl w-[inherit] mb-[10px] flex flex-wrap">
+          <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
             <BlurText
               text="Shaping"
               delay={100}
@@ -35,9 +34,11 @@ export default function HomeTag() {
               onAnimationComplete={undefined}
               className=" lg:mb-[5px] "
             />
-          </p>
 
-          <p className="sm:font-outfit font-thin text-5xl w-[inherit] mb-[10px] flex flex-wrap">
+
+          </span>
+
+          <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
             <BlurText
               text="Brands"
               delay={200}
@@ -54,10 +55,10 @@ export default function HomeTag() {
               onAnimationComplete={undefined}
               className=" lg:mb-[5px] "
             />
-          </p>
+          </span>
         </p>
 
-        <p className="sm:text-lg mb-[60px]	text-white font-thin w-[80%] max-w-[inherit]">
+        <p className="sm:text-lg mb-[60px]	text-white font-thin w-[80%] lg:w-[65%] max-w-[inherit]">
           Welcome to our world of endless imagination and boundless creativity.
           Together, let's embark on a remarkable journey where dreams become
           tangible realities

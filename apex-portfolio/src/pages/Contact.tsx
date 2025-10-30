@@ -5,6 +5,7 @@ import { faArrowDown, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RevealOnScroll } from "../components/ui/transition";
 import { useState } from "react";
+import { toast } from "sonner";
 
 
 function Contact() {
@@ -40,16 +41,18 @@ function Contact() {
         body: formData,
        })
       if(res.ok){
-       
+       toast.success("Enquiry submitted sucessfully")
         setEmail('')
         setName('')
         setProject('')
         setDisable(true)
-        alert(`Enquiry submitted sucessfully`);
+        
+        toast.success("Enquiry submitted sucessfully")
       }else{
         
         setDisable(true)      
-         alert(`Error submitting Enquiry`);
+       toast.error("Error submitting Enquiry")
+         
       }
     }catch(e){
       console.error('Error during fetch:', e);
@@ -61,10 +64,10 @@ function Contact() {
       <div className="relative font-outfit">
         <Header />
 
-        <div className="bg-white mt-[200px] h-fit ">
+        <div className="bg-white mt-[100px] h-fit ">
           {/* <hr className="w-[40vw] h-[0.4px] bg-black my-auto" />  */}
           <RevealOnScroll to={transitionElement}>
-            <div className="mb-[50px]">
+            <div className="">
               <div className="flex flex-row text-black text-[12px] h-fit w-[150px]  mx-auto justify-between items-center ">
                 <Link to="/" className="">
                   HOMEPAGE
@@ -75,14 +78,14 @@ function Contact() {
             </div>
           </RevealOnScroll>
           <RevealOnScroll to={transitionElement}>
-            <div className="mx-auto text-center mb-[50px] lg:text-2xl font-medium ">
+            <div className="mx-auto text-center my-[100px] lg:text-2xl font-medium ">
               <h1 className="text-black">Get in touch!</h1>
             </div>
           </RevealOnScroll>
           <RevealOnScroll to={transitionElement}>
             <div className="flex flex-row mb-[50px] justify-between text-[12px] text-black w-[135px] items-center mx-auto">
               <span>SEND MESSAGE</span>
-              <div className="w-[35px] h-[35px] bg-[#42424245] rounded-[45px]  flex flex-row justify-center items-center ">
+              <div className=" animate-bounce duration-1000 w-[35px] h-[35px] bg-[#42424245] rounded-[45px]  flex flex-row justify-center items-center ">
                 <FontAwesomeIcon icon={faArrowDown} />
               </div>
             </div>
@@ -90,17 +93,17 @@ function Contact() {
 
           {/* Embed a map */}
 
-          <div>
+          {/* <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13357.12620263195!2d-0.20900538583689549!3d5.552580618632729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2snz!4v1751720261674!5m2!1sen!2snz"
               loading="lazy"
               className="w-full h-[600px] border-0"
             ></iframe>
-          </div>
+          </div> */}
 
           <div className="px-[10vw]">
             <RevealOnScroll to={transitionElement}>
-              <div className="text-black mx-auto text-center my-[100px] text-5xl">
+              <div className="text-black  hidden mx-auto text-center my-[100px] text-5xl">
                 <h2>Let's Talk</h2>
               </div>
             </RevealOnScroll>
@@ -116,6 +119,7 @@ function Contact() {
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        required
                         id=""
                         placeholder="WHAT'S YOUR NAME"
                         className="border-0 border-b-[0.2px] text-greyam h-[70px] py-[auto] text-sm mb-[20px] lg:w-[48%]"
@@ -124,6 +128,8 @@ function Contact() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
+
                         id=""
                         placeholder="YOUR EMAIL"
                         className="border-0 border-b-[0.2px] text-greyam h-[70px] text-sm  mb-[20px] lg:w-[48%]"
@@ -134,6 +140,7 @@ function Contact() {
                     <textarea
                       name="project"
                       value={project}
+                      required
                       onChange={(e) => setProject(e.target.value)}
                       id=""
                       placeholder="TELL US ABOUT YOU PROJECT"
@@ -146,7 +153,7 @@ function Contact() {
                         <span className="text-amber-500">*</span>We promise not
                         to disclose your personal information to third parties
                       </span>
-                      {disable ? <button  className="w-[250px]  text-black rounded-full bg-amber-500 py-[10px] px-[15px] h-[70px]">
+                      {disable ? <button  className="w-[250px] hover:scale-110 duration-1000 ease-in-out text-black rounded-full bg-amber-500 py-[10px] px-[15px] h-[70px]">
                         {" "}
                         <div className="flex flex-row justify-between items-center">
                           <span className="ml-[20px] text-[15px]">

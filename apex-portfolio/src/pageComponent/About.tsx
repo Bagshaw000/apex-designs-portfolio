@@ -1,11 +1,18 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { RevealOnScroll } from "../components/ui/transition";
 import ethnic from "../assets/ethnic.jpg";
 import people from "../assets/people.jpg";
 import studio from "../assets/studio.jpg";
-import ProfileCard from "../components/ProfileCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../components/ui/carousel";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 function About() {
   const [isActive, setIsActive] = useState(false);
@@ -16,15 +23,18 @@ function About() {
     setIndex(index);
   };
 
+  const plugin = useRef(AutoScroll({ speed: 1,
+      stopOnInteraction: false, 
+      stopOnMouseEnter: true, 
+      }));
+
   const transitionElement =
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
-  const transitionOutElement =
-    "animate-in  ease-in slide-in-from-bottom-11 duration-700 fade-in";
   const review: number[] = [3, 1, 2];
   return (
     <div className="z-50 ">
-      <div className="text-black px-[10vw]  w-[100vw] my-[70px] lg:my-[150px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[15vw] lg:items-center 2xl:max-w-[2500px] ">
+      <div className="text-black px-[10vw]  w-[100vw] my-[70px] lg:my-[150px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[10vw] lg:items-center 2xl:max-w-[2500px] ">
         <div className="lg:w-[48%]  xl:w-[48%] ">
           <div className="my-16 lg:w-[100%]">
             <RevealOnScroll to={transitionElement}>
@@ -240,7 +250,7 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[5vw]">
+      <div className="px-[10vw] py-[70px] lg:flex  justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen lg:px-[10vw] xl:px-[10vw]">
         <div className="mb-[50px] lg:w-[45%]">
           <RevealOnScroll to={transitionElement} from={""}>
             <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
@@ -278,30 +288,16 @@ function About() {
             </div>
           </RevealOnScroll>
         </div>
-        {/* <div className="w-[inherit] flex flex-wrap justify-between  h-[2600px] sm:h-[80vh] py-10  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1350px] lg:w-[500px] lg:max-w-[500px] lg:h-[750px]">
-          <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw]    sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px]  lg:h-[300px]"></div>
-          </RevealOnScroll>
-          <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
-          </RevealOnScroll>
-          <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
-          </RevealOnScroll>
-          <RevealOnScroll to={transitionElement}>
-            <div className="w-[80vw] mx-auto  bg-greyam h-[600px] sm:w-[39vw] sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[230px] lg:h-[300px]"></div>
-          </RevealOnScroll>
-        </div> */}
 
-        <div className="w-[inherit] flex flex-col justify-between h-[2450px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[500px] lg:max-w-[500px] lg:h-[700px] lg:py-auto">
-          <div className="flex flex-col h-[1200px] justify-between sm:h-[1125px] lg:h-[650px] lg:w-[50%] lg:items-start ">
+        <div className="w-[inherit] flex flex-col justify-between h-[1750px] sm:flex-row sm:h-[1150px] py-15  sm:flex-wrap sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[475px] lg:max-w-[500px] lg:h-[700px] lg:py-auto ">
+          <div className="flex flex-col h-[850px] justify-between sm:h-[1125px] lg:h-[625px] lg:w-[50%] lg:items-start ">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
 
-                  <p className="font-light text-xs/4">
+                  <p className="font-light text-sm sm:text-xs">
                     Creative and visionary Design CEO passionate about
                     innovation, branding, and digital experiences. With a strong
                     eye for detail and strategy, he leads talented teams to
@@ -313,12 +309,12 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
 
-                  <p className="font-light text-xs/4">
+                  <p className="font-light text-sm  sm:text-xs">
                     Creative and visionary Design CEO passionate about
                     innovation, branding, and digital experiences. With a strong
                     eye for detail and strategy, he leads talented teams to
@@ -330,14 +326,14 @@ function About() {
               </div>
             </RevealOnScroll>
           </div>
-          <div className="flex flex-col justify-between h-[1200px] sm:h-[1125px] lg:h-[650px] lg:py-auto lg:w-[50%] lg:items-end">
+          <div className="flex flex-col justify-between h-[850px] sm:h-[1125px] lg:h-[625px] lg:py-auto lg:w-[50%] lg:items-end">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
 
-                  <p className="font-light text-xs/4">
+                  <p className="font-light text-sm  sm:text-xs">
                     Creative and visionary Design CEO passionate about
                     innovation, branding, and digital experiences. With a strong
                     eye for detail and strategy, he leads talented teams to
@@ -349,12 +345,12 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[575px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-[70%] absolute bottom-0 px-2   duration-400 ease-in-out slide-in-from-bottom">
+              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
+                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
                   <h2 className="">Name</h2>
                   <h3 className="">CEO</h3>
 
-                  <p className="font-light text-xs/4">
+                  <p className="font-light text-sm  sm:text-xs">
                     Creative and visionary Design CEO passionate about
                     innovation, branding, and digital experiences. With a strong
                     eye for detail and strategy, he leads talented teams to
@@ -388,6 +384,38 @@ function About() {
               onClick={() => handleClick(key)}
             ></div>
           ))}
+          <Carousel
+            className="w-full max-w-sm"
+            opts={{
+              align: "start",
+              loop: true,
+              duration:5,
+              direction:"ltr",
+              slidesToScroll: 1
+            }}
+             plugins={[plugin.current]}
+          >
+            <CarouselContent className="-ml-1 ease-in-out">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-1 md:basis-1/2 lg:basis-1/3 "
+                >
+                  <div>
+                    <div
+                      className={`min-w-[70px] min-h-[70px] w-[70px] bg-[#c4c4c475] rounded-[60px] mx-auto my-4 outline-hidden ${
+                        isActive && isIndex ? "outline-4 outline-blue-am" : ""
+                      } `}
+                    ></div>
+
+                    <p className="text-black text-center mx-auto">"Review"</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-[#c4c4c4] hidden" />
+            <CarouselNext className="bg-[#c4c4c4] hidden" />
+          </Carousel>
         </div>
       </div>
     </div>

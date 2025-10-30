@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router";
 import { RevealOnScroll } from "../components/ui/transition";
 import { useState } from "react";
+import { toast } from "sonner";
 
 function Footer() {
   const transitionElement =
@@ -21,7 +22,7 @@ function Footer() {
       Email: email,
       CreatedAt: date.toLocaleString(),
     };
-    console.log(inputValue);
+
     const APP_ID = import.meta.env.VITE_EMAIL_ID;
     const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`;
     const formData = new FormData();
@@ -38,14 +39,12 @@ function Footer() {
         setEmail("");
 
         setDisable(true);
-        alert(`Sucessfully subscribed`);
+        toast.success("Sucessfully subscribed");
       } else {
         setDisable(true);
-        alert(`Error subscribed`);
+        toast.error("Error subscribing");
       }
-    } catch (e) {
-      console.error("Error during fetch:", e);
-    }
+    } catch (e) {}
   };
   return (
     <div className="bg-black flex-col px-[8vw] py-[100px] font-outfit mb-0 w-[100vw] bottom-0 relative">
@@ -72,9 +71,10 @@ function Footer() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                   id=""
                   placeholder="ENTER YOUR EMAIL"
-                  className="w-full min-h-[85px] bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[50px] pl-[40px] md:min-h-[80px]"
+                  className="w-full min-h-[80px] text-lg bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[35px] pl-[40px] md:min-h-[80px]"
                 />
                 {disable ? (
                   <button className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
@@ -98,7 +98,7 @@ function Footer() {
             </div>
           </RevealOnScroll>
         </div>
-        <div className="flex flex-col justify-between text-xl font-medium h-[250px] md:h-[200px]  md:w-[20%]">
+        <div className="flex flex-col justify-between text-xl font-medium h-[250px] md:h-[200px]  md:w-[20%] ">
           <RevealOnScroll to={transitionElement}>
             <div className="h-fit ">{ActiveLink("/", "Home")}</div>
           </RevealOnScroll>
@@ -116,27 +116,33 @@ function Footer() {
           </RevealOnScroll>
 
           <RevealOnScroll to={transitionElement}>
-            <div className="h-fit">{ActiveLink("/blog", "Blog")}</div>
+            <div className="h-fit hidden">{ActiveLink("/blog", "Blog")}</div>
           </RevealOnScroll>
         </div>
         <div className=" md:w-[20%]">
           <div className="mt-10 md:mt-0">
             <RevealOnScroll to={transitionElement}>
               <div className="flex flex-col justify-between h-[70px]">
-                <h2 className="text-2xl font-medium ">Ghana</h2>
-                <span className="text-md text-[#8c8c8c]">Dummy Address</span>
+                <h2 className="text-lg font-medium ">Address</h2>
+                <span className="text-sm text-[#8c8c8c]">
+                  2 Ndabangini Sithole Rd Labone Accra P. O. Box AN 6153
+                  Accra North, Ghana
+                </span>
               </div>
             </RevealOnScroll>
           </div>
-          <div className="mt-10 md:mt-6">
+          <div className="mt-10 md:mt-10">
             <RevealOnScroll to={transitionElement}>
-              <div className="flex flex-row justify-between w-[50px]">
-                <a href="https://www.instagram.com/apex.designsolutions/"> <FontAwesomeIcon
-                  icon={faInstagram}
-                  style={{ color: "#ffffff" }}
-                  size="1x"
-                /></a>
-                
+              <div className="flex flex-row justify-between items-center w-[50px]">
+                <a href="https://www.instagram.com/apex.designsolutions/">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    style={{ color: "#ffffff" }}
+                    size="1x"
+                  />
+                </a>
+
                 <FontAwesomeIcon
                   icon={faBehance}
                   style={{ color: "#ffffff" }}
@@ -157,7 +163,7 @@ export default Footer;
 const ActiveLink = (to: string, children: string) => {
   const location = useLocation();
   const isActive = location.pathname === to;
-  // console.log(isActive);
+
   return (
     <Link
       to={to}
