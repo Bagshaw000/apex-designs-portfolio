@@ -94,7 +94,7 @@ const ActiveLink = (to: string, children: string) => {
       to={to}
       className={` ${
         isActive ? "text-amber-500" : "text-white"
-      } text-2xl hover:translate-x-5 hover: `}
+      } text-2xl hover:translate-x-5 hover:text-[#8DB8E8] `}
     >
       {children}
     </Link>

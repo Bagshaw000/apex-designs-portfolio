@@ -169,7 +169,7 @@ const ActiveLink = (to: string, children: string) => {
       to={to}
       className={` ${
         isActive ? "text-amber-500" : "text-white"
-      } text-xl transform transition-all  duration-1000 ease-in-out hover:translate-x-5 hover:text-blue-am`}
+      } text-xl transform transition-all  duration-1000 ease-in-out hover:translate-x-5 hover:text-[#8DB8E8]`}
     >
       {children}
     </Link>
