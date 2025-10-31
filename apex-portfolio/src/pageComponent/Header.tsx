@@ -30,7 +30,7 @@ function Header() {
     <div className="sticky top-0 z-50 bg-[#06071a]  ">
       <div className=" right-0 left-0 border-b-[0.2px] border-[#7373734f]   h-[100px]  max-h-[100px] mt-0 px-[5vw] py-auto max sm:px-[2.5vw] ">
         <div className="flex flex-row h-[inherit] my-auto justify-between items-center ">
-          <div className="sm:w-1/5 sm:block hidden bg-white-logo transition-opacity ease-in-out duration-2000">
+          <div className="sm:w-1/5 max-w-[250px] sm:block hidden bg-white-logo transition-opacity ease-in-out duration-2000">
             <img src={whiteLogo} alt="" className=" w-full " />
           </div>
            <div className="w-1/5 sm:hidden block bg-white-logo transition-opacity ease-in-out duration-2000">
@@ -41,14 +41,14 @@ function Header() {
             {checked ? (
               <button
                 onClick={handleClick}
-                className=" animate-in fade-in-10  duration-1000"
+                className=" transition animate-in  fade-in-10 delay-400 ease-in-out  duration-2000"
               >
                 <NotesIcon />
               </button>
             ) : (
               <button
                 onClick={handleClick}
-                className=" animate-in fade-in-10  duration-1000 "
+                className=" transition animate-in fade-in-10 delay-400 ease-in-out duration-2000 "
               >
                 <CloseIcon />
               </button>

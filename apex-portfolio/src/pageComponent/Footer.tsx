@@ -1,4 +1,4 @@
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faCopyright } from "@fortawesome/free-solid-svg-icons";
 import { faBehance, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router";
@@ -58,9 +58,7 @@ function Footer() {
             </div>
 
             <div>
-              <span className="text-md text-[#8c8c8c]">
-                Send us an email:
-              </span>
+              <span className="text-md text-[#8c8c8c]">Send us an email:</span>
             </div>
           </RevealOnScroll>
 
@@ -74,7 +72,7 @@ function Footer() {
                   required
                   id=""
                   placeholder="ENTER YOUR EMAIL"
-                  className="w-full min-h-[80px] text-lg bg-[#a7a7a74e] border-[0px] text-[#8c8c8c]  rounded-[35px] pl-[40px] md:min-h-[80px]"
+                  className="w-full min-h-[80px] text-lg bg-[#a7a7a74e] active:ring-3 focus:ring-[1px] focus:ring-[#ffffff4f] border-[0px] text-[#8c8c8c]  rounded-[35px] pl-[40px] md:min-h-[80px]"
                 />
                 {disable ? (
                   <button className="w-[50px] h-[50px] bg-amber-500 rounded-[45px]  flex flex-row justify-center items-center absolute bottom-[18px] right-[15px] md:bottom-[15px]">
@@ -119,12 +117,12 @@ function Footer() {
             <div className="h-fit hidden">{ActiveLink("/blog", "Blog")}</div>
           </RevealOnScroll>
         </div>
-        <div className=" md:w-[20%]">
+        <div className=" md:w-[20%] md:h-[170px] md:flex md:flex-col md:justify-between">
           <div className="mt-10 md:mt-0">
             <RevealOnScroll to={transitionElement}>
               <div className="flex flex-col justify-between h-[70px]">
                 <h2 className="text-lg font-medium ">Address</h2>
-                <span className="text-sm text-[#8c8c8c]">
+                <span className="text-sm text-neutral-400">
                   2 Ndabangini Sithole Rd Labone Accra P. O. Box AN 6153
                   Accra North, Ghana
                 </span>
@@ -132,24 +130,40 @@ function Footer() {
             </RevealOnScroll>
           </div>
           <div className="mt-10 md:mt-10">
-            <RevealOnScroll to={transitionElement}>
-              <div className="flex flex-row justify-between items-center w-[50px]">
-                <a href="https://www.instagram.com/apex.designsolutions/">
-                  {" "}
+            <div>
+              <RevealOnScroll to={transitionElement}>
+                <div className="flex flex-row justify-between items-center w-[50px]">
+                  <a href="https://www.instagram.com/apex.designsolutions/">
+                    {" "}
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      style={{ color: "#ffffff" }}
+                      size="1x"
+                    />
+                  </a>
+
                   <FontAwesomeIcon
-                    icon={faInstagram}
+                    icon={faBehance}
                     style={{ color: "#ffffff" }}
                     size="1x"
                   />
-                </a>
+                </div>
+              </RevealOnScroll>
+            </div>
 
-                <FontAwesomeIcon
-                  icon={faBehance}
-                  style={{ color: "#ffffff" }}
-                  size="1x"
-                />
-              </div>
-            </RevealOnScroll>
+            <div>
+              <RevealOnScroll to={transitionElement}>
+                <span className="text-sm text-neutral-400">
+                  Copyright{" "}
+                  <FontAwesomeIcon
+                    icon={faCopyright}
+                    className="mx-1"
+                    style={{ color: "#ffffff" }}
+                  />{" "}
+                  2025
+                </span>
+              </RevealOnScroll>
+            </div>
           </div>
         </div>
       </div>

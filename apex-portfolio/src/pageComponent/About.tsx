@@ -113,7 +113,7 @@ function About() {
       <div className="bg-[#06071a] w-screen text-sm lg:text-base px-[5vw] py-[100px] h-[fit]   ">
         <RevealOnScroll to={transitionElement} from={""}>
           <div className="w-[60%] mx-auto text-center md:w-[40%] mt-[20px] md:text-right md:mr-[5vw] lg:mr-[1%] lg:w-[400px] xl:mr-[2%] flex flex-row items-center">
-            <span className="text-[#e8e8eb70] mr-6">
+            <span className="text-neutral-400 mr-6">
               Professionals focused on helping your brand grow and move forward
             </span>
 
@@ -176,7 +176,7 @@ function About() {
                       Corporate Branding
                     </h2>
 
-                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
+                    <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                       We help organizations articulate who they are through
                       deliberate design. Combining industry-led intel with
                       creative execution, we craft visual identities that
@@ -202,7 +202,7 @@ function About() {
                       Campaign Design
                     </h2>
 
-                    <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
+                    <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                       We turn strategy into creative momentum by aligning your
                       campaign goals with design-led storytelling, targeted
                       visuals, intentional messaging, and experiences that
@@ -229,7 +229,7 @@ function About() {
                     Design Consulting
                   </h2>
 
-                  <h5 className="text-start text-sm my-[30px] text-[#e8e8eb70] lg:text-base">
+                  <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                     We examine how your brand performs across various
                     touchpoints—what works, what doesn’t, and why. We then
                     translate these insights into actionable design
