@@ -5,6 +5,9 @@ import { RevealOnScroll } from "../components/ui/transition";
 import ethnic from "../assets/ethnic.jpg";
 import people from "../assets/people.jpg";
 import studio from "../assets/studio.jpg";
+import r1 from "../assets/r1.jpg"
+import r2 from "../assets/r2.jpg"
+import r3 from "../assets/r3.jpg"
 import {
   Carousel,
   CarouselContent,
@@ -30,7 +33,7 @@ function About() {
   const transitionElement =
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
-  const review: number[] = [3, 1, 2];
+  const review = [{image:r1}, {image:r3}, {image:r2}];
   return (
     <div className="z-50 ">
       <div className="text-black px-[10vw]  w-[100vw] my-[70px] lg:my-[150px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[10vw] lg:items-center 2xl:max-w-[2500px] ">
@@ -140,7 +143,7 @@ function About() {
               <div className="h-fit ">
                 <a
                   href=""
-                  className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto ease-in-out hover:scale-110 duration-1000"
+                  className=" py-[auto]   bg-[#8DB8E8]  rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto ease-in-out hover:scale-110 duration-1000"
                 >
                   <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
                     <div className="w-[50%] ml-[30px] ">
@@ -149,10 +152,10 @@ function About() {
                       </span>
                     </div>
 
-                    <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
+                    <div className="w-[45px] h-[45px] bg-[#06071a] rounded-[35px]  flex flex-row justify-center items-center ">
                       <FontAwesomeIcon
                         icon={faArrowRight}
-                        style={{ color: "orange" }}
+                        style={{ color: "" }}
                       />
                     </div>
                   </div>
@@ -167,7 +170,7 @@ function About() {
           <div className="flex flex-wrap justify-center md:justify-start  md:w-[660px]  h-[fit] mx-auto max-w-[1200px] lg:w-[900px] xl:w-[1050px] lg:justify-center lg:flex-row lg:mb-0">
             <div className="flex flex-wrap justify-center md:justify-start   max-w-[1200px]  lg:flex-row h-fit">
               <RevealOnScroll to={transitionElement} from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105  duration-1000">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px]  lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105 z-0 hover:z-20  duration-500">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Corporate Branding
@@ -193,7 +196,7 @@ function About() {
               </RevealOnScroll>
 
               <RevealOnScroll to={transitionElement} from={""}>
-                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105 duration-1000">
+                <div className="border-[#e8e8eb29] border-[0.5px] mx-auto max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105 z-0 hover:z-20  duration-500">
                   <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                     <h2 className="text-start font-medium text-base lg:text-xl">
                       Campaign Design
@@ -220,7 +223,7 @@ function About() {
             </div>
 
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105 duration-1000">
+              <div className="border-[#e8e8eb29] border-[0.5px] mx-auto  max-w-[330px] sm:w-[400px] lg:max-w-[350px] h-[100%] bg-[#06071a] ease-in-out hover:scale-105 z-0 hover:z-20  duration-500">
                 <div className="flex flex-col justify-between w-full px-[30px] py-[50px] h-full">
                   <h2 className="text-start font-medium text-base lg:text-xl">
                     Design Consulting
@@ -375,14 +378,18 @@ function About() {
         </div>
         <div className="flex flex-col justify-center items-center w-[80vw]">
           <div className="flex flex-wrap justify-center">
-            {review.map((key) => (
+            {review.map((key,idx) => (
               <div
-                key={key}
-                className={`min-w-[70px] min-h-[70px] bg-[#c4c4c475] rounded-[60px] mx-4 my-4 outline-hidden ${
+                key={idx}
+                className={`min-w-[70px] h-[70px] w-[70px] min-h-[70px] bg-[#c4c4c475] rounded-[60px] mx-4 my-4 outline-hidden ${
                   isActive && isIndex ? "outline-4 outline-blue-am" : ""
                 } `}
-                onClick={() => handleClick(key)}
-              ></div>
+                onClick={() => handleClick(idx)}
+              >  <img
+                  src={key.image}
+                  alt={studio}
+                  className="object-cover h-[100%] w-[100%] rounded-[40px]"
+                /></div>
             ))}
           </div>
 

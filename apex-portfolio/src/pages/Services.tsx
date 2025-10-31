@@ -16,7 +16,7 @@ function Services() {
         <Header />
         {/* Tag  */}
 
-        <div className="bg-black min-h-fit    text-white mt-0 px-[10vw]">
+        <div className="bg-[#06071a] min-h-fit    text-white mt-0 px-[10vw]">
           <RevealOnScroll to={transitionElement}>
             <div className="flex flex-col justify-between h-[300px] items-start mb-[50px] max-w-[1200px] lg:mx-auto lg:mb-[100px] lg:h-[350px]">
               {/* Page Tag */}
@@ -30,7 +30,7 @@ function Services() {
                     HOMEPAGE
                   </Link>
                   <span> / </span>
-                  <span className="text-greyam ">SERVICES</span>
+                  <span className="text-neutral-400 ">SERVICES</span>
                 </div>
               </div>
               <span className=" text-3xl font-thin lg:text-5xl">
@@ -55,13 +55,13 @@ function Services() {
                 <div className="flex flex-col h-[220px] justify-between mb-[50px] lg:mb-[100px] lg:h-[250px]">
                   <h4 className="text-xl">Corporate Branding</h4>
 
-                  <span className="text-sm font-medium text-greyam">
+                  <span className="text-sm font-normal text-neutral-400">
                     Our expert team crafts impactful brand identities, from
                     custom logos to comprehensive brand guides, to help your
                     business thrive.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-medium text-greyam">
+                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -82,13 +82,13 @@ function Services() {
                 <div className="flex flex-col h-[220px] justify-between lg:mb-[100px] lg:h-[250px]">
                   <h4 className="text-xl">Campaign Design</h4>
 
-                  <span className="text-sm font-medium text-greyam">
+                  <span className="text-sm font-normal text-neutral-400">
                     Driving growth with SEO optimization, brand strategy, social
                     optimization, content and copywriting, social media
                     management, and paid ads. business thrive.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-medium text-greyam">
+                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -111,12 +111,12 @@ function Services() {
                 <div className="flex flex-col h-[220px] justify-between mb-[50px] lg:mb-[100px] lg:h-[250px]">
                   <h4 className="text-xl">Design Consulting</h4>
 
-                  <span className="text-sm font-medium text-greyam">
+                  <span className="text-sm font-normal text-neutral-400">
                     We analyze your brand's current positioning and provide
                     expert guidance to enhance its impact and market presence.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-medium text-greyam">
+                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -136,13 +136,13 @@ function Services() {
                 <div className="flex flex-col h-[220px] justify-between lg:mb-[100px] lg:h-[250px]">
                   <h4>Branding and Identity Design</h4>
 
-                  <span className="text-xs font-medium text-greyam">
+                  <span className="text-xs font-medium text-neutral-400">
                     Our expert team crafts impactful brand identities, from
                     custom logos to comprehensive brand guides, to help your
                     business thrive
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-medium text-greyam">
+                  <table className="table-auto w-[100%] text-xs font-medium text-neutral-400">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>

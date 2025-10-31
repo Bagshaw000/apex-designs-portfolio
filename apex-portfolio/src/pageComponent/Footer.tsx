@@ -49,7 +49,7 @@ function Footer() {
   return (
     <div className="bg-[#06071a] flex-col px-[8vw] py-[100px] font-outfit mb-0 w-[100vw] bottom-0 relative">
       <div className="flex flex-col md:flex-row md:justify-between max-w-[1500px] md:mx-auto">
-        <div className="flex flex-col justify-between h-[200px] mb-10 md:h-[200px] md:w-[40%]">
+        <div className="flex flex-col justify-between h-[200px] mb-10 md:h-[170px] md:w-[37%]">
           <RevealOnScroll to={transitionElement}>
             <div>
               <h5 className="text-[#d6d6d6] font-medium text-3xl ">
@@ -59,7 +59,7 @@ function Footer() {
 
             <div>
               <span className="text-md text-[#8c8c8c]">
-                Subscribe to our news letter:
+                Send us an email:
               </span>
             </div>
           </RevealOnScroll>

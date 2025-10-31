@@ -11,7 +11,7 @@ export default function HomeTag() {
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
   return (
-    <div className=" sm:h-[100vh]  w-[100vw] min-h-screen bg-[#06071a]  mt-0 relative">
+    <div className=" sm:h-screen  w-[100vw] min-h-screen bg-[#06071a]  mt-0 relative">
       <div
         style={{ position: "absolute" }}
         className="z-10 opacity-50 h-screen w-[inherit] sm:h-screen "
@@ -36,14 +36,7 @@ export default function HomeTag() {
 
             <span className="sm:font-outfit font-thin text-5xl lg:text-7xl w-[inherit] mb-[10px] flex flex-wrap">
               <b className="font-semibold mr-2">Brands </b>
-              {/* <TextType
-              text={["Today", "Today"]}
-              typingSpeed={150}
-              deletingSpeed={50}
-              pauseDuration={2300}
-              showCursor={true}
-              cursorCharacter="|"
-            /> */}
+         
               Today
             </span>
           </p>
@@ -78,7 +71,7 @@ export default function HomeTag() {
             </a>
             <a
               href="/portfolio"
-              className=" py-[auto]  rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mr-[20px]  hover:scale-110 duration-500 hover:bg-[#8DB8E8] hover:text-black"
+              className=" py-[auto]  rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mr-[20px]  hover:scale-110 duration-500 group hover:bg-[#8DB8E8] hover:text-black"
             >
               <div className=" justify-between items-center flex flex-row w-[inherit] ">
                 <div className="w-[50%] ml-[30px]">
@@ -87,8 +80,8 @@ export default function HomeTag() {
                   </span>
                 </div>
 
-                <div className="w-[45px] h-[45px] bg-[#e8e8eb20]  rounded-[35px]  flex flex-row justify-center items-center mr-2">
-                  <FontAwesomeIcon icon={faArrowRight} style={{}} />
+                <div className="w-[45px] h-[45px] bg-[#e8e8eb20] group-hover:bg-[#06071a]  rounded-[35px]  flex flex-row justify-center items-center mr-2">
+                  <FontAwesomeIcon icon={faArrowRight} style={{color:"white"}} />
                 </div>
               </div>
             </a>
