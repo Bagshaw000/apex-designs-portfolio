@@ -58,7 +58,7 @@ function Header() {
       </div>
 
       {checked ? null : (
-        <div className="z-10 absolute  right-0 left-0 text-white font-semibold h-[90vh] bg-black  duration-1000 animate-in slide-in-from-top-10 ">
+        <div className="z-10 absolute  right-0 left-0 text-white font-semibold h-[90vh] bg-[#06071a]  duration-1000 animate-in slide-in-from-top-10 ">
           <div
             className={`flex flex-col justify-between items-center py-[300px] lg:py-[220px] h-[inherit]   duration-1000 animate-in slide-in-from-bottom-12  max-h-[1000px]`}
           >

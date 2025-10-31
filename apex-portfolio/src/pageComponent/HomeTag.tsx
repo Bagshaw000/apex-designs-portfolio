@@ -51,16 +51,14 @@ export default function HomeTag() {
 
         <RevealOnScroll to={transitionElement} from={""}>
           <p className="sm:text-lg mb-[60px]	text-white font-thin w-[80%] lg:w-[65%] max-w-[inherit]">
-            Welcome to our world of endless imagination and boundless
-            creativity. Together, let's embark on a remarkable journey where
-            dreams become tangible realities
+            Welcome to our world, where creativity meets strategy. Together, we’ll shape your ideas into impactful visual that drive real results.
           </p>
         </RevealOnScroll>
         <RevealOnScroll to={transitionElement} from={""}>
           <div className=" flex flex-wrap sm:flex-row justify-between items-center max-w-[430px] mb-[10%]">
             <a
               href="/services"
-              className=" py-[auto]  bg-amber-500 rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5 mr-5 hover:scale-110 duration-1000"
+              className=" py-[auto]  bg-[#8DB8E8] rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mb-5 mt-5 mr-5 hover:scale-110 duration-500"
             >
               <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
                 <div className="w-[50%] ml-[30px]">
@@ -70,17 +68,17 @@ export default function HomeTag() {
                   </span>
                 </div>
 
-                <div className="w-[45px] h-[45px] bg-black rounded-[35px]  flex flex-row justify-center items-center ">
+                <div className="w-[45px] h-[45px] bg-[#06071a] rounded-[35px]  flex flex-row justify-center items-center ">
                   <FontAwesomeIcon
                     icon={faArrowRight}
-                    style={{ color: "orange" }}
+                    style={{ color: "white" }}
                   />
                 </div>
               </div>
             </a>
             <a
               href="/portfolio"
-              className=" py-[auto]  rounded-[40px] text-[bg-black] w-[170px] h-[60px] flex flex-row justify-center mr-[20px]  hover:scale-110 duration-1000 hover:bg-white hover:text-black"
+              className=" py-[auto]  rounded-[40px] text-[bg-black] w-[170px] h-[60px] flex flex-row justify-center mr-[20px]  hover:scale-110 duration-500 hover:bg-[#4881D5] hover:text-black"
             >
               <div className=" justify-between items-center flex flex-row w-[inherit] ">
                 <div className="w-[50%] ml-[30px]">
