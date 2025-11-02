@@ -110,7 +110,7 @@ function About() {
       </div>
 
       {/* Services */}
-      <div className="bg-[#06071a] w-screen text-sm lg:text-base px-[5vw] py-[100px] h-[fit]   ">
+      <div className="bg-[#06071a] w-screen text-sm lg:text-base px-[5vw] py-[100px] md:py-[150px] h-[fit]   ">
         <RevealOnScroll to={transitionElement} from={""}>
           <div className="w-[60%] mx-auto text-center md:w-[40%] mt-[20px] md:text-right md:mr-[5vw] lg:mr-[1%] lg:w-[400px] xl:mr-[2%] flex flex-row items-center">
             <span className="text-neutral-400 mr-6">
@@ -143,7 +143,7 @@ function About() {
               <div className="h-fit ">
                 <a
                   href=""
-                  className=" py-[auto]   bg-[#8DB8E8]  rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto ease-in-out hover:scale-110 duration-1000"
+                  className=" py-[auto]    bg-amber-500  rounded-[40px] text-[bg-black] w-[200px] h-[60px] flex flex-row justify-center mx-auto ease-in-out hover:scale-110 duration-1000"
                 >
                   <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
                     <div className="w-[50%] ml-[30px] ">
@@ -252,7 +252,7 @@ function About() {
 
       {/* Meet the team */}
 
-      <div className="px-[10vw] py-[70px] lg:flex lg:flex-row justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen 2xl:max-w-[80vw]">
+      <div className="px-[10vw] py-[70px] md:py-[150px] lg:flex lg:flex-row justify-between lg:items-center mx-auto  max-w-[1200px] md:w-screen lg:w-screen 2xl:max-w-[80vw]">
         <div className="mb-[50px] lg:w-[45%] ">
           <RevealOnScroll to={transitionElement} from={""}>
             <h1 className="text-4xl font-thin text-black my-12 md:text-5xl lg:text-6xl ">
