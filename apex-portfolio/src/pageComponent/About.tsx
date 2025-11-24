@@ -5,8 +5,6 @@ import { RevealOnScroll } from "../components/ui/transition";
 import ethnic from "../assets/ethnic.jpg";
 import people from "../assets/people.jpg";
 import studio from "../assets/studio.jpg";
-import nana from "../assets/Nana.jpg";
-import justin from "../assets/Justin.jpg";
 import r1 from "../assets/r1.jpg";
 import r2 from "../assets/r2.jpg";
 import r3 from "../assets/r3.jpg";
