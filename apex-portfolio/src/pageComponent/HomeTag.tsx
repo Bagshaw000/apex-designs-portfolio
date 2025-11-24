@@ -7,6 +7,10 @@ import TextType from "../components/TextType";
 import { RevealOnScroll } from "../components/ui/transition";
 
 export default function HomeTag() {
+  if (!sessionStorage.getItem('reloaded')) {
+        sessionStorage.setItem('reloaded', 'true');
+        window.location.reload();
+      }
   const transitionElement =
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
