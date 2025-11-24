@@ -5,9 +5,11 @@ import { RevealOnScroll } from "../components/ui/transition";
 import ethnic from "../assets/ethnic.jpg";
 import people from "../assets/people.jpg";
 import studio from "../assets/studio.jpg";
-import r1 from "../assets/r1.jpg"
-import r2 from "../assets/r2.jpg"
-import r3 from "../assets/r3.jpg"
+import nana from "../assets/Nana.jpg";
+import justin from "../assets/Justin.jpg";
+import r1 from "../assets/r1.jpg";
+import r2 from "../assets/r2.jpg";
+import r3 from "../assets/r3.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -33,7 +35,7 @@ function About() {
   const transitionElement =
     "animate-in  ease-in-out slide-in-from-bottom-11 duration-1000 fade-in";
 
-  const review = [{image:r1}, {image:r3}, {image:r2}];
+  const review = [{ image: r1 }, { image: r3 }, { image: r2 }];
   return (
     <div className="z-50 ">
       <div className="text-black px-[10vw]  w-[100vw] my-[70px] lg:my-[150px]  mx-auto flex flex-col lg:flex-row lg:justify-between lg:w-screen xl:px-[10vw] lg:items-center 2xl:max-w-[2500px] ">
@@ -294,72 +296,112 @@ function About() {
         <div className="w-[inherit] flex flex-col justify-between h-[1750px] sm:flex-row sm:h-[1150px] py-15  sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[50%]  lg:max-w-[50%] lg:h-[700px] lg:py-auto 2xl:max-w-[47%] ">
           <div className="flex flex-col h-[850px] justify-between sm:h-[1125px] lg:h-[625px] lg:w-[48%] lg:items-start ">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
-                  <h2 className="">Name</h2>
-                  <h3 className="">CEO</h3>
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Justin.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+                {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
+                <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
-                  <p className="font-light text-sm sm:text-xs">
-                    Creative and visionary Design CEO passionate about
-                    innovation, branding, and digital experiences. With a strong
-                    eye for detail and strategy, he leads talented teams to
-                    craft timeless, user-centered designs that inspire emotion,
-                    elevate brands, and drive meaningful business growth across
-                    industries.
-                  </p>
+                {/* <!-- Content with higher z-index to appear above overlay --> */}
+                <div className="relative z-10 h-full flex flex-col justify-end">
+                  {/* <!-- Hidden content that appears on hover --> */}
+                  <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10 duration-100 ease-in-out">
+                    <h2 className="text-white font-bold text-xl">
+                      Justin Adomakoh
+                    </h2>
+                    <h3 className="text-white font-semibold text-lg mb-2">
+                      CEO
+                    </h3>
+                    <p className="font-light text-sm sm:text-xs text-white">
+                      Creative and visionary Design CEO passionate about
+                      innovation, branding, and digital experiences. With a
+                      strong eye for detail and strategy, he leads talented
+                      teams to craft timeless, user-centered designs that
+                      inspire emotion, elevate brands, and drive meaningful
+                      business growth across industries.
+                    </p>
+                  </div>
                 </div>
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
-                  <h2 className="">Name</h2>
-                  <h3 className="">CEO</h3>
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/nana.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+                {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
+                <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
-                  <p className="font-light text-sm  sm:text-xs">
-                    Creative and visionary Design CEO passionate about
-                    innovation, branding, and digital experiences. With a strong
-                    eye for detail and strategy, he leads talented teams to
-                    craft timeless, user-centered designs that inspire emotion,
-                    elevate brands, and drive meaningful business growth across
-                    industries.
-                  </p>
+                {/* <!-- Content with higher z-index to appear above overlay --> */}
+                <div className="relative z-10 h-full flex flex-col justify-end">
+                  {/* <!-- Hidden content that appears on hover --> */}
+                  <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10 duration-400 ease-in-out">
+                    <h2 className="text-white font-bold text-xl">
+                      Alice Nana-Adjwoa
+                    </h2>
+                    <h3 className="text-white font-semibold text-lg mb-2">
+                      CMO
+                    </h3>
+                    <p className="font-light text-sm sm:text-xs text-white">
+                      Creative and visionary Design CEO passionate about
+                      innovation, branding, and digital experiences. With a
+                      strong eye for detail and strategy, he leads talented
+                      teams to craft timeless, user-centered designs that
+                      inspire emotion, elevate brands, and drive meaningful
+                      business growth across industries.
+                    </p>
+                  </div>
                 </div>
               </div>
             </RevealOnScroll>
           </div>
           <div className="flex flex-col justify-between h-[850px] sm:h-[1125px] lg:h-[625px] lg:py-auto lg:w-[48%] lg:items-end">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%]  lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10    duration-400 ease-in-out slide-in-from-bottom">
-                  <h2 className="">Name</h2>
-                  <h3 className="">CEO</h3>
+              <div className="w-[80vw] mx-auto group  bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+                {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
+                <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
-                  <p className="font-light text-sm  sm:text-xs">
-                    Creative and visionary Design CEO passionate about
-                    innovation, branding, and digital experiences. With a strong
-                    eye for detail and strategy, he leads talented teams to
-                    craft timeless, user-centered designs that inspire emotion,
-                    elevate brands, and drive meaningful business growth across
-                    industries.
-                  </p>
+                {/* <!-- Content with higher z-index to appear above overlay --> */}
+                <div className="relative z-10 h-full flex flex-col justify-end">
+                  {/* <!-- Hidden content that appears on hover --> */}
+                  <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10 duration-400 ease-in-out">
+                    <h2 className="text-white font-bold text-xl">
+                      Alice Nana-Adjwoa
+                    </h2>
+                    <h3 className="text-white font-semibold text-lg mb-2">
+                      CMO
+                    </h3>
+                    <p className="font-light text-sm sm:text-xs text-white">
+                      Creative and visionary Design CEO passionate about
+                      innovation, branding, and digital experiences. With a
+                      strong eye for detail and strategy, he leads talented
+                      teams to craft timeless, user-centered designs that
+                      inspire emotion, elevate brands, and drive meaningful
+                      business growth across industries.
+                    </p>
+                  </div>
                 </div>
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-greyam h-[400px] sm:w-[39vw] sm:max-h-[550px]  relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 ease-in-out  duration-500">
-                <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10   duration-400 ease-in-out slide-in-from-bottom">
-                  <h2 className="">Name</h2>
-                  <h3 className="">CEO</h3>
+              <div className="w-[80vw] mx-auto group  bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+                {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
+                <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
-                  <p className="font-light text-sm  sm:text-xs">
-                    Creative and visionary Design CEO passionate about
-                    innovation, branding, and digital experiences. With a strong
-                    eye for detail and strategy, he leads talented teams to
-                    craft timeless, user-centered designs that inspire emotion,
-                    elevate brands, and drive meaningful business growth across
-                    industries.
-                  </p>
+                {/* <!-- Content with higher z-index to appear above overlay --> */}
+                <div className="relative z-10 h-full flex flex-col justify-end">
+                  {/* <!-- Hidden content that appears on hover --> */}
+                  <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10 duration-400 ease-in-out">
+                    <h2 className="text-white font-bold text-xl">
+                      Alice Nana-Adjwoa
+                    </h2>
+                    <h3 className="text-white font-semibold text-lg mb-2">
+                      CMO
+                    </h3>
+                    <p className="font-light text-sm sm:text-xs text-white">
+                      Creative and visionary Design CEO passionate about
+                      innovation, branding, and digital experiences. With a
+                      strong eye for detail and strategy, he leads talented
+                      teams to craft timeless, user-centered designs that
+                      inspire emotion, elevate brands, and drive meaningful
+                      business growth across industries.
+                    </p>
+                  </div>
                 </div>
               </div>
             </RevealOnScroll>
@@ -378,18 +420,21 @@ function About() {
         </div>
         <div className="flex flex-col justify-center items-center w-[80vw]">
           <div className="flex flex-wrap justify-center">
-            {review.map((key,idx) => (
+            {review.map((key, idx) => (
               <div
                 key={idx}
                 className={`min-w-[70px] h-[70px] w-[70px] min-h-[70px] bg-[#c4c4c475] rounded-[60px] mx-4 my-4 outline-hidden ${
                   isActive && isIndex ? "outline-4 outline-blue-am" : ""
                 } `}
                 onClick={() => handleClick(idx)}
-              >  <img
+              >
+                {" "}
+                <img
                   src={key.image}
                   alt={studio}
                   className="object-cover h-[100%] w-[100%] rounded-[40px]"
-                /></div>
+                />
+              </div>
             ))}
           </div>
 
