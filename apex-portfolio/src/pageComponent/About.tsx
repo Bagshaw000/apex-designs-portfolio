@@ -321,7 +321,7 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/nana.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Nana.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
                 {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
