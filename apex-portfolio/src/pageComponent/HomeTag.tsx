@@ -18,7 +18,7 @@ export default function HomeTag() {
     <div className=" sm:h-screen  w-[100vw] min-h-screen bg-[#06071a]  mt-0 relative">
       <div
         style={{ position: "absolute" }}
-        className="z-10 opacity-50 h-screen w-[inherit] sm:h-screen sm:w-[inherit] "
+        className="z-10 opacity-50 h-screen w-[100vw] sm:h-screen  "
       >
         <Threads amplitude={1} distance={0.5} enableMouseInteraction={true} />
       </div>
