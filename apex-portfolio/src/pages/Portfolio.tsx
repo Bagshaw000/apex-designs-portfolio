@@ -49,13 +49,13 @@ function Portfolio() {
           </h2>
           <div className="flex flex-row justify-between text-[12px] text-black w-[135px] items-center mb-[50px]">
             <span>OUR SERVICES</span>
-            <div className="w-[35px] h-[35px] bg-[#4242427e] rounded-[45px]  flex flex-row justify-center items-center ">
-              <FontAwesomeIcon icon={faArrowDown} />
-            </div>
+            <div className=" animate-bounce duration-1000 w-[35px] h-[35px] bg-[#42424245] rounded-[45px]  flex flex-row justify-center items-center ">
+                <FontAwesomeIcon icon={faArrowDown} />
+              </div>
           </div>
 
-          <div className="flex flex-col md:flex-row md:justify-between">
-            {post.map((element, index) =>
+          <div className="flex mb-10 flex-col md:flex-row md:justify-between">
+            {/* {post.map((element, index) =>
               index % 2 === 0 ? (
                 <a
                   key={element._id as string}
@@ -97,7 +97,9 @@ function Portfolio() {
                   </RevealOnScroll>
                 </a>
               )
-            )}
+            )} */}
+            <iframe src="https://docs.google.com/file/d/1DFLKJwouv8QhWjhPOLkDK9d88hlfslUx/preview" width="100%" height="600"></iframe>
+
           </div>
         </div>
         <Footer />
