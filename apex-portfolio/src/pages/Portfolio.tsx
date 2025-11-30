@@ -8,7 +8,7 @@ import type { SanityImageObject } from "@sanity/image-url/lib/types/types";
 import { Link } from "react-router";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { RevealOnScroll } from "../components/ui/transition";
+// import { RevealOnScroll } from "../components/ui/transition";
 
 function Portfolio() {
   const [post, setPost] = useState<postData[]>([]);
@@ -17,19 +17,18 @@ function Portfolio() {
   && defined(slug.current)
 ]|order(publishedAt desc)[0...12]{ _id,slug, client, coverImage}`;
 
-  const transitionElement =
-    "animate-in ease-out slide-in-from-bottom-11 duration-700 fade-in";
+  // const transitionElement =
+  //   "animate-in ease-out slide-in-from-bottom-11 duration-700 fade-in";
   useEffect(() => {
     const getPosts = async () => {
       const posts = await client.fetch(POSTS_QUERY);
-      // console.log(posts)
+   
       setPost(posts);
-      //console.log(posts);
-      // return posts;
+     
     };
     getPosts();
   }, [post]);
-  // const posts = await client.fetch(POSTS_QUERY);
+
   return (
     <>
       <div className="relative font-outfit ">
