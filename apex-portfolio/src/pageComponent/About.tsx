@@ -66,11 +66,11 @@ function About() {
             <RevealOnScroll to={transitionElement} from={""}>
               <h6 className="text-[#42424298]">
                 As an end-to-end Design-as-a-Service (DaaS) partner, we support
-                you from concept to execution—whether launching something new,
+                you from concept to execution whether launching something new,
                 refining what exists, or scaling for growth. Through agility,
                 expertise, and imagination, we help you move forward with
                 purpose and precision. At Synergis, design is more than a
-                service—it’s a partnership rooted in alignment, collaboration,
+                service it’s a partnership rooted in alignment, collaboration,
                 and shared ambition.
               </h6>
             </RevealOnScroll>
@@ -178,7 +178,7 @@ function About() {
 
                     <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                       We help organizations articulate who they are through
-                      deliberate design. Combining industry-led intel with
+                      deliberate design. Combining industry led intel with
                       creative execution, we craft visual identities that
                       express your mantra and position you for growth. Whether
                       you’re branding up or rebranding, we deliver systems that
@@ -204,10 +204,10 @@ function About() {
 
                     <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                       We turn strategy into creative momentum by aligning your
-                      campaign goals with design-led storytelling, targeted
+                      campaign goals with design led storytelling, targeted
                       visuals, intentional messaging, and experiences that
                       ignite engagement. From concept to execution, we ensure
-                      every element— digital, print, or spatial— works
+                      every element digital, print, or spatial works
                       cohesively to drive participation, visibility, and
                       measurable results.
                     </h5>
@@ -231,7 +231,7 @@ function About() {
 
                   <h5 className="text-start text-sm my-[30px] text-neutral-400 lg:text-base">
                     We examine how your brand performs across various
-                    touchpoints—what works, what doesn’t, and why. We then
+                    touchpoints what works, what doesn’t, and why. We then
                     translate these insights into actionable design
                     recommendations that will strengthen your visual presence
                     and ensure every creative decision ties into your wider
@@ -291,10 +291,10 @@ function About() {
           </RevealOnScroll>
         </div>
 
-        <div className="w-[inherit] flex flex-col justify-between h-[1750px] sm:flex-row sm:h-[1150px] py-15  sm:items-start md:max-w-[80vw] md:max-h-[1200px] lg:w-[50%]  lg:max-w-[50%] lg:h-[700px] lg:py-auto 2xl:max-w-[47%] ">
-          <div className="flex flex-col h-[850px] justify-between sm:h-[1125px] lg:h-[625px] lg:w-[48%] lg:items-start ">
+        <div className="w-[inherit] flex flex-col justify-between h-[1300px]  py-15  sm:items-start md:max-w-[80vw] md:max-h-[1150px] lg:w-[50%]  lg:max-w-[50%] lg:h-[700px] lg:py-auto 2xl:max-w-[47%] ">
+          <div className="flex flex-col h-[825px] justify-between md:flex-row md:w-[100%] md:h-[100%] lg:h-[48.5%] lg:w-[100%]  ">
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Justin.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Justin.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative  md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[100%] hover:scale-110 hover:text-white ease-in-out duration-500">
                 {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
@@ -308,7 +308,7 @@ function About() {
                     <h3 className="text-white font-semibold text-lg mb-2">
                       CEO
                     </h3>
-                    <p className="font-light text-sm sm:text-xs text-white">
+                    <p className="font-light text-sm sm:text-xs hidden text-white">
                       Creative and visionary Design CEO passionate about
                       innovation, branding, and digital experiences. With a
                       strong eye for detail and strategy, he leads talented
@@ -321,7 +321,7 @@ function About() {
               </div>
             </RevealOnScroll>
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Nana.jpg')] bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Aaron.jpeg')]  bg-cover  bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative  md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[100%] hover:scale-110 hover:text-white ease-in-out duration-500">
                 {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
@@ -330,12 +330,12 @@ function About() {
                   {/* <!-- Hidden content that appears on hover --> */}
                   <div className="hidden group-hover:block h-fit absolute bottom-0 px-3 pb-10 duration-400 ease-in-out">
                     <h2 className="text-white font-bold text-xl">
-                      Alice Nana-Adjwoa
+                      Aaron Andoh
                     </h2>
                     <h3 className="text-white font-semibold text-lg mb-2">
-                      CMO
+                      COO
                     </h3>
-                    <p className="font-light text-sm sm:text-xs text-white">
+                    <p className="font-light text-sm hidden sm:text-xs text-white">
                       Creative and visionary Design CEO passionate about
                       innovation, branding, and digital experiences. With a
                       strong eye for detail and strategy, he leads talented
@@ -347,10 +347,11 @@ function About() {
                 </div>
               </div>
             </RevealOnScroll>
+           
           </div>
-          <div className="flex flex-col justify-between h-[850px] sm:h-[1125px] lg:h-[625px] lg:py-auto lg:w-[48%] lg:items-end">
-            <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+          <div className="flex flex-col justify-between h-[450px] lg:flex-row sm:h-[1125px] lg:h-[48.5%] lg:py-auto lg:w-[100%] ">
+             <RevealOnScroll to={transitionElement} from={""}>
+              <div className="w-[80vw] mx-auto group bg-[url('../src/assets/Nana.jpg')]  bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative  md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[100%] hover:scale-110 hover:text-white ease-in-out duration-500">
                 {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
@@ -364,7 +365,7 @@ function About() {
                     <h3 className="text-white font-semibold text-lg mb-2">
                       CMO
                     </h3>
-                    <p className="font-light text-sm sm:text-xs text-white">
+                    <p className="font-light hidden text-sm sm:text-xs text-white">
                       Creative and visionary Design CEO passionate about
                       innovation, branding, and digital experiences. With a
                       strong eye for detail and strategy, he leads talented
@@ -376,8 +377,9 @@ function About() {
                 </div>
               </div>
             </RevealOnScroll>
+            
             <RevealOnScroll to={transitionElement} from={""}>
-              <div className="w-[80vw] mx-auto group  bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
+              <div className="w-[80vw] mx-auto group hidden bg-cover bg-center bg-no-repeat h-[400px] sm:w-[39vw] sm:max-h-[550px] relative sm:h-[35vh] md:w-[38vw] md:h-[600px] lg:w-[225px] lg:max-w-[95%] lg:h-[300px] hover:scale-110 hover:text-white ease-in-out duration-500">
                 {/* <!-- Dark overlay using before pseudo-element with Tailwind --> */}
                 <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-60 transition-opacity duration-500 z-0"></div>
 
@@ -407,7 +409,7 @@ function About() {
         </div>
       </div>
 
-      <div className="px-[10vw] bg-[#c4c4c436] py-[70px] ">
+      <div className="px-[10vw] bg-[#c4c4c436] py-[70px] hidden ">
         <div>
           <RevealOnScroll to={transitionElement} from={""}>
             <h5 className="text-black font-thin text-4xl text-center">

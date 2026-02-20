@@ -12,9 +12,9 @@ function Home() {
         <About/>
         <Footer/>
       </div>
-    
     </>
+
   );
 }
 
-export default Home;
+export default Home

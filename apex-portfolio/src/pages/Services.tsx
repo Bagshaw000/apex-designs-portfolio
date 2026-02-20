@@ -52,7 +52,7 @@ function Services() {
           <div className="flex flex-col h-[fit] justify-between md:flex-row max-w-[1200px] lg:mx-auto ">
             <div className="flex flex-col mb-[50px] md:max-w-[45%] lg:mb-[100px]">
               <RevealOnScroll to={transitionElement}>
-                <div className="flex flex-col h-[220px] justify-between mb-[50px] lg:mb-[100px] lg:h-[250px]">
+                <div className="flex flex-col h-[100px] justify-between mb-[50px] lg:mb-[100px] lg:h-[150px]">
                   <h4 className="text-xl">Corporate Branding</h4>
 
                   <span className="text-sm font-normal text-neutral-400">
@@ -61,7 +61,7 @@ function Services() {
                     business thrive.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
+                  <table className="table-auto w-[100%] text-xs font-normal hidden text-neutral-400">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -79,7 +79,7 @@ function Services() {
               </RevealOnScroll>
 
               <RevealOnScroll to={transitionElement}>
-                <div className="flex flex-col h-[220px] justify-between lg:mb-[100px] lg:h-[250px]">
+                <div className="flex flex-col h-[100px] justify-between lg:mb-[100px] lg:h-[150px]">
                   <h4 className="text-xl">Campaign Design</h4>
 
                   <span className="text-sm font-normal text-neutral-400">
@@ -88,7 +88,7 @@ function Services() {
                     management, and paid ads. business thrive.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
+                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400 hidden">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -105,10 +105,10 @@ function Services() {
                 </div>
               </RevealOnScroll>
             </div>
-
+{/* flex flex-col h-[220px] justify-between mb-[50px] lg:mb-[100px] lg:h-[250px] */}
             <div className="flex flex-col h-[fit] justify-between mb-[100px] md:max-w-[45%]">
               <RevealOnScroll to={transitionElement}>
-                <div className="flex flex-col h-[220px] justify-between mb-[50px] lg:mb-[100px] lg:h-[250px]">
+                <div className="flex flex-col h-[100px] justify-between mb-[50px] lg:mb-[100px] lg:h-[150px]">
                   <h4 className="text-xl">Design Consulting</h4>
 
                   <span className="text-sm font-normal text-neutral-400">
@@ -116,7 +116,7 @@ function Services() {
                     expert guidance to enhance its impact and market presence.
                   </span>
 
-                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400">
+                  <table className="table-auto w-[100%] text-xs font-normal text-neutral-400 hidden">
                     <tbody>
                       <tr className="border-y border-[#42424251] w-[inherit] h-[40px] align-middle">
                         <td>Audit</td>
@@ -165,8 +165,8 @@ function Services() {
         {/* Contact form */}
         <div>
           <RevealOnScroll to={transitionElement}>
-            <div className="text-[#42424298] text-xs flex flex-row  items-center font-light w-[300px] mx-auto text-center my-[100px] md:text-right md:mr-[5vw]    ">
-              <span className="mr-3">
+            <div className="text-[#42424298] text-xs flex flex-row  items-center font-light w-[300px] max-w-[90vw] mx-auto text-center my-[100px] md:text-right md:mr-[5vw]    ">
+              <span className="">
                 Looking to make your mark? We'll help you turn your project into
                 a success story.
               </span>

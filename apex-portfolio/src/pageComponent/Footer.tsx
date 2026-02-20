@@ -160,7 +160,7 @@ function Footer() {
                     className="mx-1"
                     style={{ color: "#ffffff" }}
                   />{" "}
-                  2025
+                  2026
                 </span>
               </RevealOnScroll>
             </div>

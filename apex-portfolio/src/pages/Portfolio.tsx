@@ -47,7 +47,7 @@ function Portfolio() {
             <b>Better</b> World Today
           </h2>
           <div className="flex flex-row justify-between text-[12px] text-black w-[135px] items-center mb-[50px]">
-            <span>OUR SERVICES</span>
+            <span>OUR PORTFOLIO</span>
             <div className=" animate-bounce duration-1000 w-[35px] h-[35px] bg-[#42424245] rounded-[45px]  flex flex-row justify-center items-center ">
                 <FontAwesomeIcon icon={faArrowDown} />
               </div>
