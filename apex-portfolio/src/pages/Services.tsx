@@ -193,7 +193,7 @@ function Services() {
 
           <div className="mx-auto mb-[100px]">
             <a
-              href=""
+              href="/contact"
               className=" hover:scale-110 duration-1000 ease-in-out  py-[auto]  bg-amber-500 rounded-[30px] text-[bg-black] w-[170px] h-[50px] flex flex-row justify-center mx-auto"
             >
               <div className=" justify-between items-center flex flex-row w-[inherit] px-[10px]">
