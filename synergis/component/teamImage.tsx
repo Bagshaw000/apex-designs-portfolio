@@ -35,25 +35,25 @@ export default function TeamImage() {
       <div className="w-[95vw] mx-auto mb-10">
         <h1 className="text-center text-5xl font-semibold mb-15">Our team</h1>
 
-        <div className="flex flex-row relative">
-          <h1 className="text-3xl text-semibold w-[50%] pr-15">
+        <div className="flex  flex-col md:flex-row relative">
+          <h1 className="text-3xl text-semibold mb-10 md:mb-0  w-[90%] md:w-[50%] md:pr-15">
             We are a group of talented individuals who are passionate about
             bringing ideas to life. With a diverse range of backgrounds and
             skill sets, we collaborate to produce effective solutions for our
             clients.
           </h1>
 
-          <div className=" overflow-hidden sticky top-0 border-l px-10 border-black border-solid  gap-8 flex flex-col">
+          <div className=" border-l-3 pl-5 md:px-10 border-black border-solid  gap-8 flex flex-col">
             {/* Justin */}
             <div className="flex flex-row ">
-              <div className="w-40 h-40 mr-5">
+              <div className="w-40 h-fit ">
                 <Image
                   src={justin}
                   alt={""}
                   className="object-cover object-center rounded-xl w-40 h-40"
                 />
               </div>
-              <div className="font-medium text-lg w-fit">
+              <div className="font-medium md:text-lg  text-sm ml-5  w-[30%] md:w-fit">
                 {" "}
                 <h1>Justin</h1>
                 <span className="text-neutral-500">Co-Founder/CEO</span>
@@ -62,15 +62,15 @@ export default function TeamImage() {
 
             {/* Nana */}
 
-            <div className="flex flex-row ">
-              <div className="w-40 h-40 mr-5">
+            <div className="flex flex-row">
+              <div className="w-40 h-40 ">
                 <Image
                   src={nana}
                   alt={""}
                   className="object-cover object-[100%_0%]  rounded-xl w-40 h-40"
                 />
               </div>
-              <div className="font-medium text-lg w-fit">
+              <div className="font-medium md:text-lg  text-sm ml-5  w-[30%] md:w-fit">
                 {" "}
                 <h1>Alice</h1>
                 <span className="text-neutral-500">Head of Marketing</span>
@@ -80,14 +80,14 @@ export default function TeamImage() {
             {/* Aaron */}
 
             <div className="flex flex-row ">
-              <div className="w-40 h-40 mr-5">
+              <div className="w-40 h-40">
                 <Image
                   src={aaron}
                   alt={""}
                   className="object-cover w-40 h-40 object-[100%_30%]  rounded-xl "
                 />
               </div>
-              <div className="font-medium text-lg w-fit">
+              <div className="font-medium md:text-lg  text-sm ml-5 w-[30%] md:w-fit">
                 <h1>Aaron</h1>
                 <span className="text-neutral-500">
                   Co-founder/Head of Operation
