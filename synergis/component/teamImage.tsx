@@ -43,7 +43,7 @@ export default function TeamImage() {
             clients.
           </h1>
 
-          <div className=" overflow-y-scroll sticky top-0 border-l px-10 border-black border-solid  gap-8 flex flex-col">
+          <div className=" overflow-hidden sticky top-0 border-l px-10 border-black border-solid  gap-8 flex flex-col">
             {/* Justin */}
             <div className="flex flex-row ">
               <div className="w-40 h-40 mr-5">
