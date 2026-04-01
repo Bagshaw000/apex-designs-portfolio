@@ -24,15 +24,15 @@ export default function Header() {
   return (
     <div
       onClick={handleShowMenu}
-      className="w-[95vw] z-100 max-w-125  backdrop-blur-md  rounded-2xl font-bitcount fixed top-[2vh]  left-1/2 transform -translate-x-1/2  text-black  "
+      className="w-[95vw] z-100 max-w-125  backdrop-blur-md  rounded-xl font-bitcount fixed top-[2vh]  left-1/2 transform -translate-x-1/2  text-black  "
       style={
         reachedBottom
           ? { backgroundColor: "blue", color: "white" }
           : { backgroundColor: "#ffffff33" }
       }
     >
-      <div className="flex justify-between items-center px-5 h-[7vh] hover:h-[9vh] delay-100 duration-200 text-xs">
-        <Link href={""}>
+      <div className="flex justify-between items-center px-5 h-[9vh] hover:h-[9vh] delay-100 duration-200 text-xs ">
+        <Link href={"/work"}>
           <h1 className="">WORK</h1>
         </Link>
 
@@ -66,11 +66,11 @@ export default function Header() {
                   <tr className="">
                     <td className="border p-3 border-l-0">
                       {" "}
-                      <Link href={""}>Expertise & Capabilities</Link>
+                      <Link href={"/expertise"}>Expertise & Capabilities</Link>
                     </td>
                     <td className="border p-3 border-r-0">
                       {" "}
-                      <Link href={""}>Process & Pricing</Link>
+                      <Link href={"/pricing"}>Process & Pricing</Link>
                     </td>
                   </tr>
                   <tr>
@@ -79,7 +79,7 @@ export default function Header() {
                     </td>
                     <td className="border p-3 border-r-0">
                       {" "}
-                      <Link href={""}>Teams</Link>
+                      <Link href={"/team"}>Teams</Link>
                     </td>
                   </tr>
                 </tbody>

@@ -35,7 +35,7 @@ export default function TeamImage() {
       <div className="w-[95vw] mx-auto mb-10">
         <h1 className="text-center text-5xl font-semibold mb-15">Our team</h1>
 
-        <div className="flex  flex-col md:flex-row relative">
+        <div className="flex  flex-col md:flex-row relative items-center">
           <h1 className="text-3xl text-semibold mb-10 md:mb-0  w-[90%] md:w-[50%] md:pr-15">
             We are a group of talented individuals who are passionate about
             bringing ideas to life. With a diverse range of backgrounds and
@@ -43,7 +43,7 @@ export default function TeamImage() {
             clients.
           </h1>
 
-          <div className=" border-l-3 pl-5 md:px-10 border-black border-solid  gap-8 flex flex-col">
+          <div className=" border-l-3 pl-5 md:px-10 border-black border-solid   gap-10 md:justify-between h-fit flex flex-col">
             {/* Justin */}
             <div className="flex flex-row ">
               <div className="w-40 h-fit ">
