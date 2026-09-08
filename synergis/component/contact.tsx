@@ -1,24 +1,39 @@
 "use client";
-import whiteLogo from "../public/Synergis_Full_Black_Transparent.svg";
+import logo from "../public/Synergis_Full_Black_Transparent.svg";
 import Image from "next/image";
+import Link from "next/link";
+import Reveal from "@/component/reveal";
 
 export default function HomeFooter() {
   return (
-    <div className="h-screen w-[95vw] mx-auto pt-[100%] md:pt-[32%] ">
-      <div className="h-fit w-[inherit] ">
-        <div className="h-15 md:h-30 w-full md:w-100 overflow-hidden mx-auto  ">
+    <div className="min-h-screen w-[92vw] sm:w-[95vw] mx-auto flex flex-col items-center justify-center py-[20vh]">
+      <Reveal className="h-fit w-full flex flex-col items-center" y={30}>
+        <Link
+          href="/"
+          className="h-12 sm:h-16 md:h-24 w-full max-w-[280px] md:max-w-[400px] overflow-hidden block transition-opacity duration-200 hover:opacity-70"
+          aria-label="Synergis home"
+        >
           <Image
-            className="h-full w-[inherit] md:scale-100 scale-75  object-cover object-center"
-            src={whiteLogo}
-            alt=""
+            className="h-full w-full object-contain object-center"
+            src={logo}
+            alt="Synergis Design Solutions"
           />
-        </div>
+        </Link>
 
-        <div className="font-semibold text-4xl md:text-6xl text-center">
+        <div className="mt-8 font-semibold text-3xl sm:text-4xl md:text-6xl text-center tracking-tight">
           <h1>Ready when you are</h1>
-          <h1 className="text-neutral-500">Book a call</h1>
+          <a
+            href="mailto:info@synergisdesignsolutions.com?subject=Book%20a%20call"
+            className="group inline-block text-neutral-500 transition-colors duration-300 hover:text-black"
+          >
+            Book a call
+            <span className="inline-block transition-transform duration-300 group-hover:translate-x-2">
+              {" "}
+              →
+            </span>
+          </a>
         </div>
-      </div>
+      </Reveal>
     </div>
   );
 }

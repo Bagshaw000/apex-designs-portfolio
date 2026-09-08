@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/component/reveal";
+import { LABEL } from "@/lib/ui";
 import { getNextProject, getProject, projects } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -22,7 +23,6 @@ export async function generateMetadata({
   };
 }
 
-const LABEL = "font-mono uppercase tracking-[0.12em] text-xs text-neutral-500";
 
 export default async function ProjectPage({
   params,

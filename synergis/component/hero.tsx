@@ -1,14 +1,11 @@
 "use client";
 import LiquidEther from "../components/LiquidEther";
-import whiteLogo from "../public/Synergis_Full_Black_Transparent.svg";
-import Header from "./header";
 
 export default function HeroTag() {
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-full h-screen relative overflow-hidden">
       <div
         style={{ width: "100%", height: "100%", position: "relative" }}
-        className="left-1/2 transform -translate-x-1/2 rounded-5xl"
       >
         <LiquidEther
           colors={["#dfe8f4", "#eef3fa", "#cfddef"]}
@@ -28,18 +25,31 @@ export default function HeroTag() {
           autoRampDuration={0.6}
         />
       </div>
-      <div className="z-10 absolute top-[40%] md:bottom-[50%] md:top-[45%] left-auto right-auto w-[inherit]">
-        <div className="flex  flex-col md:flex-row text-4xl  text-center font-outfit font-bold md:text-3xl m-auto w-[90%]  md:w-[60%] lg:w-[50%] will-change-transform justify-between">
-          <h1 className="">
-            {" "}
-            Shaping <span className="font-light">Tomorrow's</span>
-          </h1>
-          <h1 className="">
-            {" "}
+      <div className="z-10 absolute top-[38%] md:top-[42%] left-1/2 -translate-x-1/2 w-full">
+        <h1 className="mx-auto w-[92%] md:w-[80%] lg:w-[68%] xl:w-[60%] text-center font-outfit font-bold leading-[1.1] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+          <span className="hero-line inline-block will-change-transform">
+            Shaping <span className="font-light">Tomorrow&apos;s</span>
+          </span>{" "}
+          <span className="hero-line hero-line-2 inline-block will-change-transform">
             <span className="font-light">Brands</span> Today
-          </h1>
-        </div>
+          </span>
+        </h1>
       </div>
+
+      <style>{`
+        @keyframes heroReveal {
+          from { opacity: 0; transform: translate3d(0, 1.6rem, 0); filter: blur(6px); }
+          to   { opacity: 1; transform: translate3d(0, 0, 0);      filter: blur(0); }
+        }
+        .hero-line {
+          opacity: 0;
+          animation: heroReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+        }
+        .hero-line-2 { animation-delay: 0.32s; }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-line { opacity: 1; animation: none; filter: none; transform: none; }
+        }
+      `}</style>
     </div>
   );
 }

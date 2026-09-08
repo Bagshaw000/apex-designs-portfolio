@@ -4,17 +4,15 @@ import HeroTag from "@/component/hero";
 import HomeService from "@/component/homeservice";
 import MiniAboutUs from "@/component/miniAboutUs";
 import Work from "@/component/work";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-white text-black">
-
-      <Header/>
-      <HeroTag/>
-      <HomeService/>
-      <Work/>
-      <MiniAboutUs/>
+    <div className="bg-white text-black overflow-x-hidden">
+      <Header />
+      <HeroTag />
+      <HomeService />
+      <Work />
+      <MiniAboutUs />
       <HomeFooter />
     </div>
   );

@@ -1,20 +1,32 @@
 import Process from "@/component/process";
+import Reveal from "@/component/reveal";
 import Link from "next/link";
 
-export default function pricing() {
+export const metadata = {
+  title: "Process & Pricing — Synergis Design Solutions",
+  description:
+    "Transparent, flat-fee pricing for brand and campaign design, delivered in sprints.",
+};
+
+export default function Pricing() {
   return (
-    <div className="px-5 bg-white text-black min-h-fit h-screen">
+    <div className="bg-white text-black min-h-screen pb-[10vh]">
       <Process />
-      <div className="h-[50vh] w-full  mt-[30%] text-center align-middle">
-        <Link
-          href={""}
-          className="text-3xl h-[inherit] align-middle font-semibold"
-        >
-          <div className="py-auto h-full align-middle">
-            <h1 className="text-black ">Next chapter</h1>
-            <h1 className="text-neutral-500">Work</h1>
-          </div>
-        </Link>
+
+      <div className="w-[92vw] max-w-[1400px] mx-auto pt-[16vh] md:pt-[20vh] text-center border-t border-neutral-200">
+        <Reveal y={24}>
+          <Link
+            href="/work"
+            className="group inline-block text-3xl md:text-4xl font-semibold"
+          >
+            <span className="block font-mono uppercase tracking-[0.14em] text-xs text-neutral-500 mb-3">
+              Next chapter
+            </span>
+            <span className="block transition-transform duration-300 group-hover:-translate-y-1">
+              Work
+            </span>
+          </Link>
+        </Reveal>
       </div>
     </div>
   );
