@@ -1,17 +1,14 @@
-"use client"
 import Header from "@/component/header";
 
-export default function ExpertiseLayout({
+export default function PricingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body >
-        <Header/>
-        <main>{children}</main>
-      </body>
-    </html>
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
   );
 }

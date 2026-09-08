@@ -18,11 +18,11 @@ export default function process() {
   };
   return (
     <div className="pt-30  w-full ">
-      <h1 className="text-white font-semibold md:w-80 font-sans text-3xl/8">
+      <h1 className="text-black font-semibold md:w-80 font-sans text-3xl/8">
         Our pricing system is transparent. Explore the perfect solution below.
       </h1>
 
-      <div className="flex flex-row justify-between items-end text-white mt-20">
+      <div className="flex flex-row justify-between items-end text-black mt-20">
         <h1 className="text-xs w-[40%] "> SELECT YOUR PROJECT</h1>
         <div>
           <h1 className="text-sm">FROM</h1>
@@ -37,7 +37,7 @@ export default function process() {
             handleService(0);
           }}
         >
-          <h1 className="border w-32 text-center  py-2 px-2 rounded-md text-xs text-white">
+          <h1 className="border w-32 text-center  py-2 px-2 rounded-md text-xs text-black">
             Campaign Design
           </h1>
         </Link>
@@ -47,7 +47,7 @@ export default function process() {
             handleService(0);
           }}
         >
-          <h1 className="border w-38 text-center  py-2 px-2 rounded-md text-xs text-white">
+          <h1 className="border w-38 text-center  py-2 px-2 rounded-md text-xs text-black">
             Corporate Branding
           </h1>
         </Link>
@@ -57,7 +57,7 @@ export default function process() {
             handleService(0);
           }}
         >
-          <h1 className="border w-38 text-center  py-2 px-2 rounded-md text-xs text-white">
+          <h1 className="border w-38 text-center  py-2 px-2 rounded-md text-xs text-black">
             Design Consulting
           </h1>
         </Link>
@@ -67,7 +67,7 @@ export default function process() {
 
       </div>
 
-      <div className="text-white flex flex-row justify-between font-semibold mt-15">
+      <div className="text-black flex flex-row justify-between font-semibold mt-15">
         <div className="border-l-2 pl-2 w-[60%] text-sm/6">
           <Link href={""} className="">
             <h1 className="">British High Commission</h1>

@@ -1,9 +1,9 @@
 export default function Capabilities() {
   return (
     <div className="mt-40">
-      <div className="flex flex-col gap-15 lg:flex-row items-center text-white">
+      <div className="flex flex-col gap-15 lg:flex-row items-center text-black">
         <h1 className="font-semibold">Expertise</h1>
-        <div className="text-white gap-15 flex flex-col  lg:flex-row">
+        <div className="text-black gap-15 flex flex-col  lg:flex-row">
           <div className="">
             <h1 className="lg:block hidden mb-5 text-sm">Corporate Branding</h1>
             <div className="border-l-2 pl-5">

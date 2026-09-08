@@ -19,7 +19,7 @@ export default function TeamImage() {
   return (
     <div className="relative">
       <div
-        className="w-full h-screen flex flex-row overflow-x-auto mb-25 bg-neutral-600"
+        className="w-full h-screen flex flex-row overflow-x-auto mb-25 bg-neutral-100"
         data-scroll-behavior="smooth"
       >
         {/* {imageLogos.map((element, index) => (

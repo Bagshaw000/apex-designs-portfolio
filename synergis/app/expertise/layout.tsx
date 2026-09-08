@@ -6,11 +6,9 @@ export default function ExpertiseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Header/>
-        <main>{children}</main>
-      </body>
-    </html>
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
   );
 }

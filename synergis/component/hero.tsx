@@ -11,7 +11,7 @@ export default function HeroTag() {
         className="left-1/2 transform -translate-x-1/2 rounded-5xl"
       >
         <LiquidEther
-          colors={["#111111a", "#152331a", "#000000a"]}
+          colors={["#dfe8f4", "#eef3fa", "#cfddef"]}
           mouseForce={20}
           cursorSize={100}
           isViscous

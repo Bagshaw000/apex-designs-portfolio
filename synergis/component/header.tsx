@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import blackLogo from "../public/Synergis_Full_Black_Transparent.svg";
-import whiteLogo from "../public/Synergis_Full_White_Transparent.svg";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -27,7 +26,7 @@ export default function Header() {
       className="w-[95vw] z-100 max-w-125  backdrop-blur-md  rounded-xl font-bitcount fixed top-[2vh]  left-1/2 transform -translate-x-1/2  text-black  "
       style={
         reachedBottom
-          ? { backgroundColor: "blue", color: "white" }
+          ? { backgroundColor: "#ffffffcc", color: "black" }
           : { backgroundColor: "#ffffff33" }
       }
     >
@@ -37,19 +36,11 @@ export default function Header() {
         </Link>
 
         <div className="h-10 w-48 overflow-hidden ">
-          {!reachedBottom ? (
-            <Image
-              className="h-full w-full md:scale-70 object-cover object-center"
-              src={blackLogo}
-              alt=""
-            />
-          ) : (
-            <Image
-              className="h-full w-full md:scale-70 object-cover object-center"
-              src={whiteLogo}
-              alt=""
-            />
-          )}
+          <Image
+            className="h-full w-full md:scale-70 object-cover object-center"
+            src={blackLogo}
+            alt=""
+          />
         </div>
 
         <Link href={""}>
