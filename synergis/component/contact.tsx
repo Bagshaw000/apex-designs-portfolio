@@ -23,7 +23,9 @@ export default function HomeFooter() {
         <div className="mt-8 font-semibold text-3xl sm:text-4xl md:text-6xl text-center tracking-tight">
           <h1>Ready when you are</h1>
           <a
-            href="mailto:info@synergisdesignsolutions.com?subject=Book%20a%20call"
+            href="https://calendar.app.google/7Vr9h6T1i7stfyRu5"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-block text-neutral-500 transition-colors duration-300 hover:text-black"
           >
             Book a call

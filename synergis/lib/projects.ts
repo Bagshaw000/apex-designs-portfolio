@@ -149,8 +149,8 @@ export const projects: Project[] = [
     },
     statement: "Connecting capitals for economic growth.",
     hero: {
-      src: "/work/london-to-accra/03.jpg",
-      alt: "London to Accra summit stage with a curved LED backdrop",
+      src: "/work/london-to-accra/real-01.jpg",
+      alt: "The London to Accra Economic Growth Summit 2026 hall, set and stage",
     },
     sections: [
       {
@@ -163,18 +163,14 @@ export const projects: Project[] = [
         layout: "full",
       },
       {
-        label: "Stage",
+        label: "On the day",
+        heading: "The identity, built at full scale",
+        text: "Stage set, LED backdrop, podium and hall dressing for the inaugural summit at the British High Commission’s residence in Accra.",
         images: [
-          { src: "/work/london-to-accra/03.jpg", alt: "Curved LED stage backdrop with lounge seating" },
+          { src: "/work/london-to-accra/real-02.jpg", alt: "Summit hall and stage set on the day" },
+          { src: "/work/london-to-accra/real-03.jpg", alt: "A speaker addressing the summit from the branded podium" },
         ],
-        layout: "full",
-      },
-      {
-        label: "Media Wall",
-        images: [
-          { src: "/work/london-to-accra/01.jpg", alt: "Step-and-repeat media wall with partner logos" },
-        ],
-        layout: "full",
+        layout: "pair",
       },
       {
         label: "Signage",

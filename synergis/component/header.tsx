@@ -7,16 +7,67 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 
+type SubscribeState = "idle" | "loading" | "success" | "error";
+
 export default function Header() {
   const [menu, setMenu] = useState(false);
   const reachedBottom = useIsAtBottom(100);
 
+  const [email, setEmail] = useState("");
+  const [subscribe, setSubscribe] = useState<SubscribeState>("idle");
+
+  // Clear the success / error message a few seconds after it shows.
+  useEffect(() => {
+    if (subscribe !== "success" && subscribe !== "error") return;
+    const t = window.setTimeout(() => setSubscribe("idle"), 4000);
+    return () => window.clearTimeout(t);
+  }, [subscribe]);
+
   const handleShowMenu = () => {
     setMenu(!menu);
   };
+
+  const handleSubscribe = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (subscribe === "loading" || !email.trim()) return;
+    setSubscribe("loading");
+
+    const APP_ID = process.env.NEXT_PUBLIC_EMAIL_ID;
+    if (!APP_ID) {
+      setSubscribe("error");
+      return;
+    }
+
+    const baseURL = `https://script.google.com/macros/s/${APP_ID}/exec`;
+    // application/x-www-form-urlencoded is CORS-safelisted (no preflight) and
+    // avoids the multipart boundary; the Apps Script web app echoes back
+    // { result: "success", row: N } with Access-Control-Allow-Origin: *.
+    const body = new URLSearchParams({
+      Email: email,
+      CreatedAt: new Date().toLocaleString(),
+    });
+
+    try {
+      const res = await fetch(baseURL, { method: "POST", body });
+      const data = (await res.json().catch(() => null)) as
+        | { result?: string }
+        | null;
+
+      if (res.ok && data?.result !== "error") {
+        setEmail("");
+        setSubscribe("success");
+      } else {
+        setSubscribe("error");
+      }
+    } catch {
+      setSubscribe("error");
+    }
+  };
+
   return (
     <div
       onClick={handleShowMenu}
+      onMouseLeave={() => setMenu(false)}
       className="w-[95vw] z-100 max-w-125  backdrop-blur-md  rounded-xl font-bitcount fixed top-[2vh]  left-1/2 transform -translate-x-1/2  text-black transition-colors duration-500 "
       style={
         reachedBottom
@@ -112,7 +163,9 @@ export default function Header() {
               </a>
 
               <a
-                href="mailto:info@synergisdesignsolutions.com?subject=Plan%20a%20call"
+                href="https://calendar.app.google/7Vr9h6T1i7stfyRu5"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-row items-center h-fit"
               >
                 <div className="h-2 w-2 bg-blue-900 opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100 ease-in-out"></div>
@@ -124,21 +177,44 @@ export default function Header() {
           </div>
         ) : null
       ) : (
-        <div className="p-5 text-center mt-15 w-fit md:w-[70%] mx-auto">
+        <form
+          onSubmit={handleSubscribe}
+          onClick={(e) => e.stopPropagation()}
+          className="p-5 text-center mt-15 w-fit md:w-[70%] mx-auto"
+        >
           <h1 className="text-xl font-bold mb-5">
             {" "}
             Industry insight & agency updates
           </h1>
           <input
-            type="text"
-            name=""
-            id=""
+            type="email"
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (subscribe !== "loading") setSubscribe("idle");
+            }}
             className="bg-[#b8b8b833] h-10 w-full text-sm p-3 mb-3 rounded-lg text-center border-0 border-transparent active:border-0 focus:border-0"
             placeholder="brandon@synergisdesign.com"
           />
-          {/* <input type="button" value="" /> */}
-          <Button className="bg-white text-black w-full h-10">Submit</Button>
-        </div>
+          <Button
+            type="submit"
+            disabled={subscribe === "loading"}
+            className="bg-white text-black w-full h-10 disabled:opacity-60"
+          >
+            {subscribe === "loading" ? "Subscribing…" : "Submit"}
+          </Button>
+          {subscribe === "success" && (
+            <p className="mt-3 text-sm text-green-700">
+              Successfully subscribed.
+            </p>
+          )}
+          {subscribe === "error" && (
+            <p className="mt-3 text-sm text-red-600">
+              Something went wrong. Please try again.
+            </p>
+          )}
+        </form>
       )}
     </div>
   );

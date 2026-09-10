@@ -10,9 +10,9 @@ export default function Home() {
     <div className="bg-white text-black overflow-x-hidden">
       <Header />
       <HeroTag />
+      <MiniAboutUs />
       <HomeService />
       <Work />
-      <MiniAboutUs />
       <HomeFooter />
     </div>
   );
